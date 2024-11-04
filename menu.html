@@ -116,76 +116,130 @@
             font-size: 0.95em; /* Tamaño de fuente ligeramente más grande */
             color: #666;
         }
-
-/* Asegúrate de incluir esta fuente en tu HTML */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap');
-
-body {
-    font-family: 'Montserrat', sans-serif; /* Fuente general */
-    background-color: #f0f0f0; /* Fondo suave para el cuerpo */
-}
-
-.producto {
-    margin-bottom: 20px; /* Espacio debajo de cada producto */
-    text-align: center; /* Centrar el contenido del producto */
-}
-
-.contacto {
-    background-color: #fff; /* Fondo blanco para la sección de contacto */
-    padding: 30px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
-    text-align: center; /* Centrar texto */
-    margin-top: 20px; /* Espacio por encima de la sección de contacto */
-    transition: transform 0.3s; /* Efecto de transformación */
-}
-
-.contacto:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-}
-
-.contacto h3 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
-    font-size: 24px; /* Tamaño del título */
-    color: #333; /* Color del texto del título */
-    margin-bottom: 15px; /* Espacio debajo del título */
-}
-
-.contacto p {
-    font-size: 18px; /* Tamaño de fuente más grande para párrafos */
-    margin: 10px 0; /* Espaciado entre párrafos */
-    color: #555; /* Color de texto suave */
-}
-
-.contacto a {
-    color: #007bff; /* Color del enlace */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: 600; /* Peso de la fuente más fuerte */
-}
-
-.contacto a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-    color: #0056b3; /* Color más oscuro al pasar el mouse */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    position: absolute; /* Permite posicionar el logo en la esquina */
-    left: 10px; /* Mueve el logo más a la izquierda */
-    top: 10px; /* Ajusta la distancia del logo desde la parte superior */
-    z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
-    border-radius: 50%; /* Hace que el logo tenga bordes redondeados para darle forma ovalada */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
-    width: 200px; /* Ancho del contenedor ovalado */
-    height: 200px; /* Altura del contenedor ovalado */
-}
-
-.logo img {
-    height: 80px; /* Aumenta la altura del logo para hacerlo más grande */
-    width: auto; /* Mantiene la proporción del logo */
-}
-
+    
+        /* Asegúrate de incluir esta fuente en tu HTML */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+    
+        body {
+            font-family: 'Montserrat', sans-serif; /* Fuente general */
+            background-color: #f0f0f0; /* Fondo suave para el cuerpo */
+        }
+    
+        .producto {
+            margin-bottom: 20px; /* Espacio debajo de cada producto */
+            text-align: center; /* Centrar el contenido del producto */
+        }
+    
+        .contacto {
+            background-color: #fff; /* Fondo blanco para la sección de contacto */
+            padding: 30px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+            text-align: center; /* Centrar texto */
+            margin-top: 20px; /* Espacio por encima de la sección de contacto */
+            transition: transform 0.3s; /* Efecto de transformación */
+        }
+    
+        .contacto:hover {
+            transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+        }
+    
+        .contacto h3 {
+            font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
+            font-size: 24px; /* Tamaño del título */
+            color: #333; /* Color del texto del título */
+            margin-bottom: 15px; /* Espacio debajo del título */
+        }
+    
+        .contacto p {
+            font-size: 18px; /* Tamaño de fuente más grande para párrafos */
+            margin: 10px 0; /* Espaciado entre párrafos */
+            color: #555; /* Color de texto suave */
+        }
+    
+        .contacto a {
+            color: #007bff; /* Color del enlace */
+            text-decoration: none; /* Sin subrayado */
+            font-weight: 600; /* Peso de la fuente más fuerte */
+        }
+    
+        .contacto a:hover {
+            text-decoration: underline; /* Subrayado al pasar el mouse */
+            color: #0056b3; /* Color más oscuro al pasar el mouse */
+        }
+    
+        .logo {
+            display: flex;
+            align-items: center;
+            position: absolute; /* Permite posicionar el logo en la esquina */
+            left: 10px; /* Mueve el logo más a la izquierda */
+            top: 10px; /* Ajusta la distancia del logo desde la parte superior */
+            z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
+            border-radius: 50%; /* Hace que el logo tenga bordes redondeados para darle forma ovalada */
+            overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+            width: 200px; /* Ancho del contenedor ovalado */
+            height: 200px; /* Altura del contenedor ovalado */
+        }
+    
+        .logo img {
+            height: 80px; /* Aumenta la altura del logo para hacerlo más grande */
+            width: auto; /* Mantiene la proporción del logo */
+        }
+    
+        /* Consultas de medios para la responsividad */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Tamaño de fuente más pequeño en pantallas más pequeñas */
+            }
+    
+            .menu {
+                flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+                align-items: center; /* Centra los elementos del menú */
+            }
+    
+            .categoria {
+                width: 90%; /* Ancho más amplio en pantallas pequeñas */
+            }
+    
+            .producto img {
+                width: 80px; /* Reduce el tamaño de la imagen */
+                height: 80px; /* Reduce el tamaño de la imagen */
+            }
+    
+            .contacto {
+                padding: 20px; /* Reduce el padding en contacto */
+            }
+    
+            .contacto h3 {
+                font-size: 20px; /* Tamaño de fuente más pequeño para el título en contacto */
+            }
+    
+            .contacto p {
+                font-size: 16px; /* Tamaño de fuente más pequeño para los párrafos en contacto */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em; /* Tamaño de fuente aún más pequeño en pantallas pequeñas */
+            }
+    
+            .categoria h2 {
+                font-size: 1.5em; /* Tamaño de fuente más pequeño para encabezados en categorías */
+            }
+    
+            .producto-info h3 {
+                font-size: 1.3em; /* Tamaño de fuente más pequeño para productos */
+            }
+    
+            .precio {
+                font-size: 1em; /* Tamaño de fuente más pequeño para precio */
+            }
+    
+            .ingredientes {
+                font-size: 0.85em; /* Tamaño de fuente más pequeño para ingredientes */
+            }
+        }
     </style>
     
 </head>
