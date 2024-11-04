@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Renacer - Menú</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../img/Logo_renacer.jpeg" type="image/x-icon">
+    <div class="logo">
+        <img src="/img/Logo_renacer.jpeg" alt="Logo de The Renacer"> <!-- Cambia la ruta por la ubicación real de tu logo -->
+    </div>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Cambiada a Poppins */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9f9f9; /* Color de fondo más suave */
+        }
+    
+        h1 {
+            color: #2c3e50; /* Color más oscuro para el título */
+            margin: 20px 0;
+            text-align: center;
+            font-size: 2.5em; /* Tamaño de fuente más grande */
+            transition: color 0.3s ease; /* Efecto de transición */
+        }
+    
+        h1:hover {
+            color: #d23f57; /* Cambio de color al pasar el mouse */
+        }
+    
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+    
+        .categoria {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px; /* Esquinas más redondeadas */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+            transition: transform 0.3s, box-shadow 0.3s; /* Efecto de animación */
+        }
+    
+        .categoria:hover {
+            transform: translateY(-5px); /* Levantar el cuadro al pasar el mouse */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+        }
+    
+        .categoria h2 {
+            color: #d23f57;
+            margin-top: 0;
+            font-size: 1.8em; /* Tamaño de fuente más grande para los encabezados */
+            text-align: center;
+            border-bottom: 2px solid #d23f57; /* Línea decorativa debajo del título */
+            padding-bottom: 10px;
+        }
+    
+        .producto {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s; /* Efecto de fondo */
+        }
+    
+        .producto:last-child {
+            border-bottom: none;
+        }
+    
+        .producto:hover {
+            background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
+        }
+    
+        .producto img {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px; /* Esquinas más redondeadas */
+            margin-right: 15px;
+            transition: transform 0.3s; /* Animación de imagen */
+        }
+    
+        .producto img:hover {
+            transform: scale(1.05); /* Escalar imagen al pasar el mouse */
+        }
+    
+        .producto-info {
+            flex: 1;
+        }
+    
+        .producto-info h3 {
+            margin: 0;
+            font-size: 1.5em; /* Tamaño de fuente más grande */
+            color: #2c3e50; /* Color de texto más oscuro */
+        }
+    
+        .precio {
+            color: #d23f57;
+            font-weight: bold;
+            margin-top: 5px;
+            font-size: 1.2em; /* Tamaño de fuente más grande */
+        }
+    
+        .ingredientes {
+            font-size: 0.95em; /* Tamaño de fuente ligeramente más grande */
+            color: #666;
+        }
+
+/* Asegúrate de incluir esta fuente en tu HTML */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    background-color: #f0f0f0; /* Fondo suave para el cuerpo */
+}
+
+.producto {
+    margin-bottom: 20px; /* Espacio debajo de cada producto */
+    text-align: center; /* Centrar el contenido del producto */
+}
+
+.contacto {
+    background-color: #fff; /* Fondo blanco para la sección de contacto */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    text-align: center; /* Centrar texto */
+    margin-top: 20px; /* Espacio por encima de la sección de contacto */
+    transition: transform 0.3s; /* Efecto de transformación */
+}
+
+.contacto:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.contacto h3 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante para el título */
+    font-size: 24px; /* Tamaño del título */
+    color: #333; /* Color del texto del título */
+    margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+.contacto p {
+    font-size: 18px; /* Tamaño de fuente más grande para párrafos */
+    margin: 10px 0; /* Espaciado entre párrafos */
+    color: #555; /* Color de texto suave */
+}
+
+.contacto a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 600; /* Peso de la fuente más fuerte */
+}
+
+.contacto a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Permite posicionar el logo en la esquina */
+    left: 10px; /* Mueve el logo más a la izquierda */
+    top: 10px; /* Ajusta la distancia del logo desde la parte superior */
+    z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
+    border-radius: 50%; /* Hace que el logo tenga bordes redondeados para darle forma ovalada */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
+    width: 200px; /* Ancho del contenedor ovalado */
+    height: 200px; /* Altura del contenedor ovalado */
+}
+
+.logo img {
+    height: 200px; /* Aumenta la altura del logo para hacerlo más grande */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+    </style>
+    
+</head>
+<body>
+    <h1>MENU - THE RENACER </h1>
+    <div class="menu">
+        
+        <!-- Categoría Hamburguesas -->
+<div class="categoria">
+    <h2>Hamburguesas</h2>
+    
+    <!-- Hamburguesa Sencilla -->
+    <div class="producto">
+        <img src="/img/hamburguesaSencilla.png" alt="Hamburguesa Sencilla">
+        <div class="producto-info">
+            <h3>Sencilla</h3>
+            <p class="precio">$9,000</p>
+            <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozarrella, Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Mini Especial -->
+    <div class="producto">
+        <img src="/img/mini_especial.jpg" alt="Mini Especial">
+        <div class="producto-info">
+            <h3>Mini Especial</h3>
+            <p class="precio">$11,000</p>
+            <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozarrella, Jamon, Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Especial -->
+    <div class="producto">
+        <img src="/img/hamburguesaEspecial.jpg" alt="Especial">
+        <div class="producto-info">
+            <h3>Especial</h3>
+            <p class="precio">$15,000</p>
+            <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozarrella, Papas, Jamon, Tocineta Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Doble -->
+    <div class="producto">
+        <img src="/img/doble_carne.jpg" alt="Doble">
+        <div class="producto-info">
+            <h3>Doble</h3>
+            <p class="precio">$18,000</p>
+            <p class="ingredientes">Pan hamburguesa,  2 Carne artesanal, Queso mozarrella, Jamon, Tocineta, Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Ranchera -->
+    <div class="producto">
+        <img src="/img/ranchera.jpg" alt="Ranchera">
+        <div class="producto-info">
+            <h3>Ranchera</h3>
+            <p class="precio">$16,000</p>
+            <p class="ingredientes">Pan hamburguesa, Ranchera, Queso mozarrella, Jamon, Tocineta Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Suiza -->
+    <div class="producto">
+        <img src="/img/suiza.jpg" alt="Suiza">
+        <div class="producto-info">
+            <h3>Suiza</h3>
+            <p class="precio">$19,000</p>
+            <p class="ingredientes">Pan hamburguesa, carne artesanal,  Suiza, Queso mozarrella, Jamon, Tocineta Lechuga, Tomate, cebolla ,Salsas</p>
+        </div>
+    </div>
+
+    <!-- Bañada en Queso -->
+    <div class="producto">
+        <img src="/img/banada_queso.jpg" alt="Bañada en Queso">
+        <div class="producto-info">
+            <h3>Bañada en Queso</h3>
+            <p class="precio">$13,000</p>
+            <p class="ingredientes">Pan hamburguesa, carne artesanal, Queso mozarrella, queso derretido + jamon en cuadros, Jamon, Tocineta Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Doble Bañada en Queso -->
+    <div class="producto">
+        <img src="/img/doble_banada_queso.jpg" alt="Doble Bañada en Queso">
+        <div class="producto-info">
+            <h3>Doble Bañada en Queso</h3>
+            <p class="precio">$20,000</p>
+            <p class="ingredientes">Pan hamburguesa, 2 carne artesanal, Queso mozarrella, queso derretido + jamon en cuadros, Jamon, Tocineta Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- La Renacer -->
+    <div class="producto">
+        <img src="/img/renacer.jpg" alt="La Renacer">
+        <div class="producto-info">
+            <h3>La Renacer</h3>
+            <p class="precio">$25,000</p>
+            <p class="ingredientes">Pan hamburguesa, 3 carne artesanal, Queso mozarrella, queso derretido + jamon en cuadros, Jamon, Tocineta Lechuga, Tomate, cebolla, Salsas</p>
+        </div>
+    </div>
+</div>
+
+       <!-- Categoría Perros Calientes -->
+<div class="categoria">
+    <h2>Perros Calientes</h2>
+    
+    <!-- Perro Sencillo -->
+    <div class="producto">
+        <img src="/img/perro_sencillo.jpg" alt="Perro Sencillo">
+        <div class="producto-info">
+            <h3>Perro Sencillo</h3>
+            <p class="precio">$6,000</p>
+            <p class="ingredientes">Pan perro, Salchicha, Queso rallado, Papas fosforito, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Perro Mini Especial -->
+    <div class="producto">
+        <img src="/img/perro_mini_especial.jpg" alt="Perro Mini Especial">
+        <div class="producto-info">
+            <h3>Perro Mini Especial</h3>
+            <p class="precio">$7,000</p>
+            <p class="ingredientes">Pan perro, Salchicha, ripio, lechuga, cebolla, jamon, Queso, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Perro Especial -->
+    <div class="producto">
+        <img src="/img/perro_especial.jpg" alt="Perro Especial">
+        <div class="producto-info">
+            <h3>Perro Especial</h3>
+            <p class="precio">$8,000</p>
+            <p class="ingredientes">Pan perro, Salchicha, ripio, lechuga, cebolla, jamon, tocineta, Queso, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Choriperro -->
+    <div class="producto">
+        <img src="/img/choriperro.jpg" alt="Choriperro">
+        <div class="producto-info">
+            <h3>Choriperro</h3>
+            <p class="precio">$10,000</p>
+            <p class="ingredientes">Pan perro, Chorizo, ripio, lechuga, cebolla, jamon, tocineta, Queso, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Perro Ranchero -->
+    <div class="producto">
+        <img src="/img/perro_ranchero.jpg" alt="Perro Ranchero">
+        <div class="producto-info">
+            <h3>Perro Ranchero</h3>
+            <p class="precio">$11,000</p>
+            <p class="ingredientes">Pan perro, Ranchera, ripio, lechuga, cebolla, jamon, tocineta, Queso, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Perro Suizo -->
+    <div class="producto">
+        <img src="/img/perro_suizo.jpg" alt="Perro Suizo">
+        <div class="producto-info">
+            <h3>Perro Suizo</h3>
+            <p class="precio">$13,000</p>
+            <p class="ingredientes">Pan perro, Suiza, ripio, lechuga, cebolla, jamon, tocineta, Queso, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Perro Renacer -->
+    <div class="producto">
+        <img src="/img/perro_renacer.jpg" alt="Perro Renacer">
+        <div class="producto-info">
+            <h3>Perro Renacer</h3>
+            <p class="precio">$15,000</p>
+            <p class="ingredientes">Pan perro, salchicha, pollo, maiz, ripio, lechuga, cebolla, jamon, tocineta, Queso, Salsas</p>
+        </div>
+    </div>
+</div>
+        
+        <!-- Categoría Salchipapas -->
+<div class="categoria">
+    <h2>Salchipapas</h2>
+    
+    <!-- Salchipapa Sencilla -->
+    <div class="producto">
+        <img src="/img/salchipapa_sencilla.jpg" alt="Salchipapa Sencilla">
+        <div class="producto-info">
+            <h3>Salchipapa Sencilla</h3>
+            <p class="precio">$10,000</p>
+            <p class="ingredientes">Papas Fritas, Salchicha, Ripio, queso costeño, lechuga, Salsa</p>
+        </div>
+    </div>
+
+    <!-- Salchipapa Mini Especial -->
+    <div class="producto">
+        <img src="/img/salchipapa_mini_especial.jpg" alt="Salchipapa Mini Especial">
+        <div class="producto-info">
+            <h3>Salchipapa Mini Especial</h3>
+            <p class="precio">$13,000</p>
+            <p class="ingredientes">Papas Fritas, Salchicha, Ripio, lomo de cerdo, queso costeño, lechuga, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Salchipapa Especial -->
+    <div class="producto">
+        <img src="/img/salchipapa_especial.jpg" alt="Salchipapa Especial">
+        <div class="producto-info">
+            <h3>Salchipapa Especial</h3>
+            <p class="precio">$16,000</p>
+            <p class="ingredientes">Papas Fritas, Salchicha, Ripio, lomo de cerdo, lechuga, queso costeño, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Salchipapa Renacer -->
+    <div class="producto">
+        <img src="/img/salchipapa_renacer.jpg" alt="Salchipapa Renacer">
+        <div class="producto-info">
+            <h3>Salchipapa Renacer</h3>
+            <p class="precio">$25,000</p>
+            <p class="ingredientes"> Papas Fritas, Salchicha, Ripio, lomo de cerdo, queso mozarella, tocineta, lechuga, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Choripapa Sencilla -->
+    <div class="producto">
+        <img src="/img/choripapa.jpg" alt="Choripapa Sencilla">
+        <div class="producto-info">
+            <h3>Choripapa Sencilla</h3>
+            <p class="precio">$11,000</p>
+            <p class="ingredientes">Papas Fritas, Salchicha, Ripio, lomo de cerdo, pollo, queso mozarella, lechuga, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Choripapa Mini Especial -->
+    <div class="producto">
+        <img src="/img/choripapa.jpg" alt="Choripapa Mini Especial">
+        <div class="producto-info">
+            <h3>Choripapa Mini Especial</h3>
+            <p class="precio">$14,000</p>
+            <p class="ingredientes">Papas Fritas, Chorizo, Queso costeño, cebolla, lechuga, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Choripapa Especial -->
+    <div class="producto">
+        <img src="/img/choripapa.jpg" alt="Choripapa Especial">
+        <div class="producto-info">
+            <h3>Choripapa Especial</h3>
+            <p class="precio">$18,000</p>
+            <p class="ingredientes"> Papas Fritas, Chorizo, Queso, lomo de cerdo, Tocineta, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Choripapa Renacer -->
+    <div class="producto">
+        <img src="/img/choripapa.jpg" alt="Choripapa Renacer">
+        <div class="producto-info">
+            <h3>Choripapa Renacer</h3>
+            <p class="precio">$27,000</p>
+            <p class="ingredientes">Papas Fritas, Chorizo, lomo de cerdo, Queso mozarella, pollo, maiz, Tocineta, Salsas</p>
+        </div>
+    </div>
+</div>
+        
+        <!-- Categoría Suizo -->
+<div class="categoria">
+    <h2>Suizo</h2>
+    
+    <!-- Suizo Sencillo -->
+    <div class="producto">
+        <img src="/img/suizo_sencillo.jpg" alt="Suizo Sencillo">
+        <div class="producto-info">
+            <h3>Suizo Sencillo</h3>
+            <p class="precio">$14,000</p>
+            <p class="ingredientes">Pan, Queso costeño, Suiza, cebolla, lechuga, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Suizo Mini Especial -->
+    <div class="producto">
+        <img src="/img/suizo_mini_especial.jpg" alt="Suizo Mini Especial">
+        <div class="producto-info">
+            <h3>Suizo Mini Especial</h3>
+            <p class="precio">$17,000</p>
+            <p class="ingredientes">Pan, Queso costeño, lomo de cerdo, Suiza, lechuga, cebolla, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Suizo Especial -->
+    <div class="producto">
+        <img src="/img/suizo_especial.jpg" alt="Suizo Especial">
+        <div class="producto-info">
+            <h3>Suizo Especial</h3>
+            <p class="precio">$22,000</p>
+            <p class="ingredientes">Pan, Queso mozarella, lomo de cerdo, Suiza, cebolla, lechuga, Salsas</p>
+        </div>
+    </div>
+
+    <!-- Suizo Renacer -->
+    <div class="producto">
+        <img src="/img/suizo_renacer.jpeg" alt="Suizo Renacer">
+        <div class="producto-info">
+            <h3>Suizo Renacer</h3>
+            <p class="precio">$28,000</p>
+            <p class="ingredientes">Pan, Queso mozarella, lomo de cerdo, patacon, Suiza, lechuga, cebolla, Salsas</p>
+        </div>
+    </div>
+</div>
+        
+       <!-- Categoría Picadas -->
+<div class="categoria">
+    <h2>Picadas</h2>
+    
+    <!-- Picada Sencilla -->
+    <div class="producto">
+        <img src="/img/picada_sencilla.jpg" alt="Picada Sencilla">
+        <div class="producto-info">
+            <h3>Picada Sencilla</h3>
+            <p class="precio">$22,000</p>
+            <p class="ingredientes"> Papas, lomo cerdo, lechuga, cebolla, ripio, queso costeño, salsas</p>
+        </div>
+    </div>
+
+    <!-- Picada Especial -->
+    <div class="producto">
+        <img src="/img/picada_especial.jpg" alt="Picada Especial">
+        <div class="producto-info">
+            <h3>Picada Especial</h3>
+            <p class="precio">$28,000</p>
+            <p class="ingredientes">Papas, lomo cerdo, pechuga, butifarra, lechuga, cebolla, ripio, queso costeño, salsas</p>
+        </div>
+    </div>
+
+    <!-- Picada para 3 Personas -->
+    <div class="producto">
+        <img src="/img/picada_3_personas.jpg" alt="Picada para 3 Personas">
+        <div class="producto-info">
+            <h3>Picada para 3 Personas</h3>
+            <p class="precio">$40,000</p>
+            <p class="ingredientes">Papas, lomo cerdo, pechuga, butifarra, chorizo, ranchera, lechuga, cebolla, ripio, queso costeño, salsas</p>
+        </div>
+    </div>
+
+    <!-- Picada para 4 Personas -->
+    <div class="producto">
+        <img src="/img/picada_4_personas.jpg" alt="Picada para 4 Personas">
+        <div class="producto-info">
+            <h3>Picada para 4 Personas</h3>
+            <p class="precio">$55,000</p>
+            <p class="ingredientes">Papas, lomo cerdo, pechuga, carne de res, butifarra, chorizo, ranchera, suiza, lechuga, cebolla, ripio, queso costeño, salsas</p>
+        </div>
+    </div>
+
+    <!-- Picada para 5 Personas -->
+    <div class="producto">
+        <img src="/img/picada_5_personas.jpg" alt="Picada para 5 Personas">
+        <div class="producto-info">
+            <h3>Picada para 5 Personas</h3>
+            <p class="precio">$70,000</p>
+            <p class="ingredientes">Papas, lomo cerdo, pechuga, carne de res, costillitas, butifarra, chorizo, ranchera, suiza, lechuga, cebolla, ripio, queso mozarella, salsas</p>
+        </div>
+    </div>
+
+    <!-- Picada para 6 Personas -->
+<div class="producto">
+    <img src="/img/picada_6_personas.jpg" alt="Picada para 6 Personas">
+    <div class="producto-info">
+        <h3>Picada para 6 Personas</h3>
+        <p class="precio">$85,000</p>
+        <p class="ingredientes"> Papas, lomo cerdo, pechuga, carne de res, costillitas, chicharrón, butifarra, chorizo, ranchera, suiza, lechuga, cebolla, ripio, queso mozarella, salsas</p>
+    </div>
+</div>
+
+<!-- Información de Contacto -->
+<div class="contacto">
+    <p><i class="fas fa-motorcycle"></i> Domicilio: <a href="https://wa.me/573226155457" target="_blank">322-615-54-57</a></p> <!-- Enlace a WhatsApp -->
+    <p><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/the_renacerpr" target="_blank">the_renacerpr</a></p>
+    <p><i class="fab fa-tiktok"></i> TikTok: <a href="https://www.tiktok.com/@the_renacer_fast_food" target="_blank">the renacer fast food</a></p>
+    
+    <!-- Métodos de Pago -->
+    <p><i class="fas fa-money-bill-wave"></i> Nequi: <a href="https://recarga.nequi.com.co/bdigitalpsl/#!/" target="_blank" onclick="window.open('https://recarga.nequi.com.co/bdigitalpsl/#!/','_blank'); return false;">322-615-54-57</a></p>
+    <p><i class="fas fa-university"></i> Bancolombia Ahorro a la Mano: <a href="https://bancolombia.com" target="_blank" onclick="window.open('https://bancolombia.com','_blank'); return false;">687-637-960-12</a></p>
+</div>
+
+</body>
+</html>
