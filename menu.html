@@ -494,10 +494,16 @@
     🛒 <span id="contador-carrito">0</span>
 </button>
 
+<!-- Botón visible para mostrar/ocultar carrito -->
+<button id="toggle-carrito" class="toggle-carrito" style="margin: 10px; padding: 10px; font-size: 16px;">
+    🛒 Mostrar/Ocultar Carrito <span id="contador-carrito">0</span>
+</button>
+
 <!-- Contenedor del Carrito de Compras -->
-<div id="carrito-container">
+<div id="carrito-container"> <!-- Ahora visible por defecto -->
     <div id="carrito">
         <h2>🛒 Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="btn-cerrar">Cerrar</button> <!-- Botón para cerrar el carrito -->
         <div id="lista-carrito">
             <!-- Aquí se agregarán dinámicamente los productos -->
         </div>
@@ -512,7 +518,6 @@
         </div>
     </div>
 </div>
-
 <!-- Overlay para notificaciones -->
 <div id="overlay" class="overlay" style="display: none;">
     <div class="mensaje-envio">

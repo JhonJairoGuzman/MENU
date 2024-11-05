@@ -148,6 +148,10 @@ function enviarPedidoWhatsApp() {
     }, 3000);
 }
 
+
+
+
+
 // Función para mostrar notificación de envío
 function mostrarNotificacionEnvio() {
     const overlay = document.createElement('div');
