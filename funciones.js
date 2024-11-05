@@ -3,6 +3,8 @@ let carrito = [];
 const btnCarrito = document.querySelector('#btn-carrito');
 const listaCarrito = document.querySelector('#lista-carrito');
 const totalElement = document.querySelector('#total');
+const contadorCarrito = document.querySelector('#contador-carrito');
+const btnVaciar = document.querySelector('#vaciar-carrito');
 let total = 0;
 
 // Clase para los items del carrito
@@ -24,6 +26,16 @@ function inicializarEventos() {
 
     // Evento para el botón de enviar pedido
     document.querySelector('#enviar-pedido').addEventListener('click', enviarPedidoWhatsApp);
+
+    // Evento para el botón de vaciar carrito
+    btnVaciar.addEventListener('click', vaciarCarrito);
+}
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+    carrito = [];
+    actualizarCarrito();
+    mostrarNotificacion('Carrito vaciado');
 }
 
 // Función para agregar productos al carrito
@@ -51,7 +63,15 @@ function agregarAlCarrito(e) {
     }
 
     actualizarCarrito();
+    actualizarContadorCarrito();
     mostrarNotificacion('Producto agregado al carrito');
+}
+
+// Función para actualizar el contador del carrito
+function actualizarContadorCarrito() {
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    contadorCarrito.textContent = totalItems;
+    contadorCarrito.style.display = totalItems > 0 ? 'flex' : 'none';
 }
 
 // Función para actualizar la visualización del carrito
@@ -73,6 +93,7 @@ function actualizarCarrito() {
     });
 
     totalElement.textContent = `Total: $${total.toLocaleString()}`;
+    actualizarContadorCarrito();
 }
 
 // Función para eliminar items del carrito
@@ -117,7 +138,6 @@ function enviarPedidoWhatsApp() {
         mensaje += `*TOTAL: $${total.toLocaleString()}*\n\n`;
         mensaje += '¿Podrías confirmarme la dirección de entrega?';
 
-        // Número de WhatsApp del negocio
         const telefono = '573226155457';
         const mensajeCodificado = encodeURIComponent(mensaje);
         const urlWhatsApp = `https://wa.me/${telefono}?text=${mensajeCodificado}`;
