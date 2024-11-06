@@ -117,11 +117,10 @@ function actualizarCarrito() {
             <span>$${item.total.toLocaleString()}</span>
             <button onclick="eliminarDelCarrito(${index})" class="btn-eliminar">X</button>
         `;
-        listaCarrito.appendChild(itemElement);
+        listaCarrito.appendChild (itemElement);
         total += item.total;
     });
 
-    totalElement.text 
     totalElement.textContent = `Total: $${total.toLocaleString()}`;
     actualizarContadorCarrito();
 }

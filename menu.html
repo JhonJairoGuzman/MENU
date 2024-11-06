@@ -487,23 +487,23 @@
         </div>
     </div>
 
-    <!-- Contenedor para los botones de abrir y cerrar carrito -->
-    <div class="boton-container">
-        <button id="abrir-carrito" class="boton-carrito">Abrir Carrito</button>
-        <button id="cerrar-carrito-modal" class="btn-cerrar">Cerrar Carrito</button> <!-- ID cambiado aquí -->
-    </div>
-
-    <!-- Botón flotante para mostrar/ocultar carrito en móviles -->
-    <button id="toggle-carrito" class="toggle-carrito">
-        🛒 <span id="contador-carrito">0</span>
-    </button>
-
-    <!-- Contenedor del Carrito de Compras -->
-<div id="carrito-container"> <!-- Ahora visible por defecto -->
-    <div id="carrito">
-        <h2>🛒 Carrito de Compras</h2>
-        <button id="cerrar-carrito-modal" class="btn-cerrar">Cerrar</button> <!-- ID cambiado aquí -->
-        <div id="lista-carrito">
+        <!-- Contenedor para los botones de abrir y cerrar carrito -->
+        <div class="boton-container">
+            <button id="abrir-carrito" class="boton-carrito">Abrir Carrito</button>
+            <button id="cerrar-carrito-modal" class="btn-cerrar" style="display: none;">Cerrar Carrito</button> <!-- Oculto por defecto -->
+        </div>
+    
+        <!-- Botón flotante para mostrar/ocultar carrito en móviles -->
+        <button id="toggle-carrito" class="toggle-carrito">
+            🛒 <span id="contador-carrito">0</span>
+        </button>
+    
+        <!-- Contenedor del Carrito de Compras -->
+        <div id="carrito-container" style="display: none;"> <!-- Oculto por defecto -->
+            <div id="carrito">
+                <h2>🛒 Carrito de Compras</h2>
+                <button id="cerrar-carrito-modal" class="btn-cerrar">Cerrar</button>
+                <div id="lista-carrito"></div>
             <!-- Aquí se agregarán dinámicamente los productos -->
         </div>
         <div id="total">Total: $0</div>
