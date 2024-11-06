@@ -1,10 +1,12 @@
 // Variables globales
 let carrito = [];
-const btnCarrito = document.querySelector('#btn-carrito');
 const listaCarrito = document.querySelector('#lista-carrito');
 const totalElement = document.querySelector('#total');
 const contadorCarrito = document.querySelector('#contador-carrito');
 const btnVaciar = document.querySelector('#vaciar-carrito');
+const btnAbrirCarrito = document.querySelector('#abrir-carrito');
+const btnCerrarCarrito = document.querySelector('#cerrar-carrito');
+const btnToggleCarrito = document.querySelector('#toggle-carrito');
 let total = 0;
 
 // Clase para los items del carrito
@@ -29,6 +31,27 @@ function inicializarEventos() {
 
     // Evento para el botón de vaciar carrito
     btnVaciar.addEventListener('click', vaciarCarrito);
+
+    // Evento para abrir/cerrar el carrito
+    btnAbrirCarrito.addEventListener('click', abrirCarrito);
+    btnCerrarCarrito.addEventListener('click', cerrarCarrito);
+    btnToggleCarrito.addEventListener('click', toggleCarrito);
+}
+
+// Función para abrir el carrito
+function abrirCarrito() {
+    document.querySelector('#carrito-container').style.display = 'block'; // Muestra el carrito
+}
+
+// Función para cerrar el carrito
+function cerrarCarrito() {
+    document.querySelector('#carrito-container').style.display = 'none'; // Oculta el carrito
+}
+
+// Función para mostrar/ocultar el carrito
+function toggleCarrito() {
+    const carritoContainer = document.querySelector('#carrito-container');
+    carritoContainer.style.display = carritoContainer.style.display === 'block' ? 'none' : 'block';
 }
 
 // Función para vaciar el carrito
@@ -49,7 +72,13 @@ function agregarAlCarrito(e) {
     }
 
     const nombre = producto.querySelector('h3').textContent;
-    const precio = parseInt(producto.querySelector('.precio').textContent.replace('$', '').replace(',', ''));
+    const precioText = producto.querySelector('.precio').textContent.replace('$', '').replace(',', '');
+    const precio = parseInt(precioText);
+
+    if (isNaN(precio)) {
+        alert('Precio no válido');
+        return;
+    }
 
     // Verificar si el producto ya está en el carrito
     const itemExistente = carrito.find(item => item.nombre === nombre);
@@ -92,6 +121,7 @@ function actualizarCarrito() {
         total += item.total;
     });
 
+    totalElement.text 
     totalElement.textContent = `Total: $${total.toLocaleString()}`;
     actualizarContadorCarrito();
 }
@@ -147,10 +177,6 @@ function enviarPedidoWhatsApp() {
         actualizarCarrito();
     }, 3000);
 }
-
-
-
-
 
 // Función para mostrar notificación de envío
 function mostrarNotificacionEnvio() {

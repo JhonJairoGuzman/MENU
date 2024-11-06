@@ -1,7 +1,7 @@
-/* estilos de menu.html */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* O 'Montserrat', según tu preferencia */
     margin: 0;
     padding: 0;
     display: flex;
@@ -66,6 +66,7 @@ h1:hover {
         max-height: 40px;
     }
 }
+
 .categoria {
     width: 100%;
     max-width: 600px;
@@ -150,8 +151,7 @@ h1:hover {
     border-radius: 8px;
     margin-right: 10px;
     font-size: 1em;
-    text-align: center;
-}
+    text-align: center }
 
 .boton-carrito {
     background-color: #d23f57;
@@ -170,12 +170,6 @@ h1:hover {
 }
 
 /* Estilos para la información de contacto */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
 .contacto {
     background-color: #ffffff;
     padding: 30px;
@@ -240,13 +234,15 @@ body {
 #carrito-container {
     position: fixed;
     right: 10px;
-    top: 10px;
-    width: 50px;
-    background-color: white;
+    bottom: 0; /* Cambiado a la parte inferior */
+    width: 300px; /* Tamaño predeterminado para desktop */
+    height: auto; /* Ajustado para que se adapte al contenido */
+    background-color: black; /* Color negro para el contenedor */
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    max-height: 30vh;
+    padding: 10px;
+    box-sizing: border-box;
     overflow-y: auto;
 }
 
@@ -256,7 +252,7 @@ body {
 
 #carrito h2 {
     text-align: center;
-    color: #333;
+    color: #ffffff; /* Color del texto en el carrito */
     margin-bottom: 15px;
     border-bottom: 2px solid #d23f57;
     padding-bottom: 10px;
@@ -273,6 +269,7 @@ body {
     padding: 10px;
     border-bottom: 1px solid #eee;
     font-size: 0.9em;
+    color: #ffffff; /* Color del texto en los items del carrito */
 }
 
 #total {
@@ -280,7 +277,7 @@ body {
     text-align: right;
     margin: 15px 0;
     font-size: 1.2em;
-    color: #d23f57;
+    color: #d23f57; /* Color del total */
 }
 
 .btn-enviar, .btn-vaciar {
@@ -288,7 +285,7 @@ body {
     padding: 10px;
     margin: 5px 0;
     border: none;
-    border-radius: 5 px;
+    border-radius: 5px; /* Corregido el espacio */
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
@@ -379,14 +376,41 @@ body {
     text-align: center;
 }
 
+/* Estilos del botón Cerrar Carrito */
+.boton-cerrar-carrito {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-cerrar-carrito:hover {
+    background-color: #c82333;
+}
+
 /* Media queries para hacer el carrito responsive */
 @media (max-width: 750px) {
     #carrito-container {
-        width: 100%;
-        right: 0;
-        top: auto;
-        bottom: 0;
-        max-height: 50vh;
+        position: relative; /* Cambiado a relative para que se posicione debajo de los productos */
+        margin-top: 20px; /* Espacio entre los productos y el carrito */
+        padding: 20px;
+        background-color: black; /* Color negro para el contenedor */
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .productos {
+        margin-bottom: 20px; /* Espacio entre los productos y el carrito */
+    }
+    
+    .producto {
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        border-radius: 5px;
     }
 
     #carrito {
@@ -400,180 +424,33 @@ body {
     }
 }
 
-/* Animación para el carrito */
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+/* Estilos para los botones flotantes */
+#toggle-carrito {
+    display: none; /* Oculto por defecto, se mostrará en móviles */
 }
 
-#carrito-container {
-    animation: slideIn 0.3s ease-out;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px; /* Tamaño predeterminado para desktop */
-    height: 100vh;
-    background-color: white;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    padding: 10px;
-    box-sizing: border-box;
-    overflow-y: auto;
+#toggle-carrito-movil {
+    display: none; /* Oculto por defecto, se mostrará en móviles */
 }
 
-/* Media queries para diferentes tamaños de pantalla */
-
-/* Para tablets */
-@media screen and (max-width: 768px) {
-    #carrito-container {
-        width: 350px;
-        padding: 15px;
+@media (max-width: 768px) {
+    #toggle-carrito {
+        display: block; /* Mostrar en móviles */
     }
 
-    .item-carrito {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    #total {
+    #toggle-carrito-movil {
+        display: block; /* Mostrar en móviles */
+        background-color: #d23f57;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
         font-size: 16px;
-    }
-}
-
-/* Para móviles grandes */
-@media screen and (max-width: 480px) {
-    #carrito-container {
-        width: 100%;
-        padding: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
-    .item-carrito {
-        font-size: 13px;
-        padding: 6px;
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr auto;
-        gap: 5px;
+    #toggle-carrito-movil:hover {
+        background-color: #c0392b; /* Color más oscuro al pasar el mouse */
     }
-
-    .btn-eliminar {
-        padding: 4px 8px;
-        font-size: 12px;
-    }
-
-    #enviar-pedido, #vaciar-carrito {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
-
-/* Para móviles pequeños */
-@media screen and (max-width: 320px) {
-    #carrito-container {
-        padding: 10px;
-    }
-
-    .item-carrito {
-        font-size: 12px;
-        padding: 5px;
-    }
-
-    #total {
-        font-size: 14px;
-        margin: 10px 0;
-    }
-
-    .btn-eliminar {
-        padding: 3px 6px;
-        font-size: 11px;
-    }
-}
-
-/* Estilos adicionales para mejorar la usabilidad en móviles */
-@media screen and (max-width: 480px) {
-    /* Hacer el scroll más suave en móviles */
-    #carrito-container {
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* Aumentar el área táctil para botones */
-    .btn-eliminar, 
-    #enviar-pedido, 
-    #vaciar-carrito {
-        min-height: 44px;
-        min-width: 44px;
-    }
-
-    /* Mejorar la separación entre elementos */
-    .item-carrito + .item-carrito {
-        margin-top: 8px;
-        border-top: 1px solid #eee;
-    }
-
-    /* Ajustar el espaciado del contenido */
-    .item-carrito {
-        margin-bottom: 5px;
-    }
-
-    /* Estilo para el scroll */
-    #carrito-container::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    #carrito-container::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 3px;
-    }
-}
-
-/* Ajustes para la orientación horizontal en móviles */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    #carrito-container {
-        padding-bottom: 60px; /* Espacio extra para el botón de enviar */
-    }
-
-    .item-carrito {
-        margin-bottom: 3px;
-    }
-}
-
-
-/* Estilos para el contador del carrito */
-#contador-carrito {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #d32f2f;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
-    min-width: 15px;
-    text-align: center;
-}
-
-@media screen and (max-width: 480px) {
-    #contador-carrito {
-        font-size: 10px;
-        padding: 1px 5px;
-        min-width: 12px;
-    }
-
-    .btn-cerrar {
-        background-color: #ff4d4d; /* Color de fondo rojo */
-        color: white; /* Color del texto */
-        border: none; /* Sin borde */
-        padding: 10px; /* Espaciado interno */
-        cursor: pointer; /* Cambia el cursor al pasar el mouse */
-        margin-bottom: 10px; /* Espacio debajo del botón */
-    }
-    
-    .btn-cerrar:hover {
-        background-color: #ff1a1a; /* Color más oscuro al pasar el mouse */
-    }
-
-    
 }
