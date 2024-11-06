@@ -7,6 +7,8 @@ const btnVaciar = document.querySelector('#vaciar-carrito');
 const btnAbrirCarrito = document.querySelector('#abrir-carrito');
 const btnCerrarCarrito = document.querySelector('#cerrar-carrito');
 const btnToggleCarrito = document.querySelector('#toggle-carrito');
+const btnMenu = document.querySelector('#boton-menu'); // Botón de opciones
+const opcionesMenu = document.querySelector('#opciones-menu'); // Menú de opciones
 let total = 0;
 
 // Clase para los items del carrito
@@ -36,6 +38,9 @@ function inicializarEventos() {
     btnAbrirCarrito.addEventListener('click', abrirCarrito);
     btnCerrarCarrito.addEventListener('click', cerrarCarrito);
     btnToggleCarrito.addEventListener('click', toggleCarrito);
+
+    // Evento para el botón de opciones
+    btnMenu.addEventListener('click', toggleOpcionesMenu);
 }
 
 // Función para abrir el carrito
@@ -52,6 +57,15 @@ function cerrarCarrito() {
 function toggleCarrito() {
     const carritoContainer = document.querySelector('#carrito-container');
     carritoContainer.style.display = carritoContainer.style.display === 'block' ? 'none' : 'block';
+}
+
+// Función para mostrar/ocultar el menú de opciones
+function toggleOpcionesMenu() {
+    if (opcionesMenu.style.display === 'none' || opcionesMenu.style.display === '') {
+        opcionesMenu.style.display = 'block'; // Muestra el menú
+    } else {
+        opcionesMenu.style.display = 'none'; // Oculta el menú
+    }
 }
 
 // Función para vaciar el carrito
@@ -117,7 +131,7 @@ function actualizarCarrito() {
             <span>$${item.total.toLocaleString()}</span>
             <button onclick="eliminarDelCarrito(${index})" class="btn-eliminar">X</button>
         `;
-        listaCarrito.appendChild (itemElement);
+        listaCarrito.appendChild(itemElement);
         total += item.total;
     });
 

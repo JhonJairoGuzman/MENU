@@ -1,0 +1,264 @@
+:root {
+    --color-primary: #c41e3a;
+    --color-secondary: #146b3a;
+    --color-accent: #ffd700;
+    --color-background: #f8f8f8;
+    --color-text: #333;
+    --color-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('snowflakes-bg.png');
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-white);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-family: 'Festive', cursive;
+    font-size: 3em;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% { text-shadow: 0 0 5px rgba(255,255,255,0.8); }
+    50% { text-shadow: 0 0 20px rgba(255,255,255,0.8); }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Button Styles */
+.button {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-family: 'Festive', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Event Cards Styles */
+.evento, .menu-item, .promocion {
+    background: var(--color-white);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.evento:hover, .menu-item:hover, .promocion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.evento img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.evento img:hover {
+    transform: scale(1.03);
+}
+
+h3 {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.fecha {
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.descripcion {
+    margin: 1rem 0;
+}
+
+ul {
+    list-style-position: inside;
+    margin: 1rem 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.precio {
+    font-size: 1.2em;
+    color: var(--color-primary);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* Decorative Elements */
+.evento::before, .menu-item::before, .promocion::before {
+    content: '🎄';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    opacity: 0.2;
+    animation: swing 3s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+}
+
+/* Snowflakes Animation */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.snowflake {
+    color: var(--color-white);
+    font-size: 1.5em;
+    position: fixed;
+    top: -10%;
+    animation: snowfall linear infinite, sway ease-in-out infinite;
+}
+
+@keyframes snowfall {
+    0% { top: -10%; }
+    100% { top: 100%; }
+}
+
+@keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .evento, .menu-item, .promocion {
+        padding: 1rem;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    color: var(--color-white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+/* Special Effects for Christmas */
+.promocion {
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+/* Hover Effects */
+.menu-item:hover::after {
+    content: '🎁';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2em;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform : translateY(-10px); }
+}
