@@ -50,7 +50,6 @@ h1:hover {
     display: block; /* Elimina el espacio debajo de la imagen */
 }
 
-
 .button {
     display: inline-block; /* Permite que el enlace se comporte como un bloque */
     padding: 12px 24px; /* Espaciado interno */
@@ -101,7 +100,7 @@ h1:hover {
     .logo {
         width: 15vw; /* Aumenta el tamaño en pantallas más pequeñas */
         max-width: 50px;
-        max-height: 50px;
+        max-height: 50 px;
     }
 }
 
@@ -267,7 +266,7 @@ h1:hover {
 }
 
 .contacto a:hover {
-    color: #c0392b;
+    color: #c0392b; /* Color más oscuro al pasar el mouse */
     border-bottom: 1px solid #c0392b;
 }
 
@@ -276,6 +275,9 @@ h1:hover {
 .contacto .fa-tiktok { color: #000000; }
 .contacto .fa-money-bill-wave { color: #27ae60; }
 .contacto .fa-university { color: #3498db; }
+
+
+
 
 /* Estilos para el carrito de compras */
 #carrito-container {
@@ -344,7 +346,7 @@ h1:hover {
 }
 
 .btn-enviar:hover {
- background-color: #128C7E;
+    background-color: #128C7E;
 }
 
 .btn-vaciar {
@@ -425,7 +427,7 @@ h1:hover {
 
 /* Estilos del botón Cerrar Carrito */
 .boton-cerrar-carrito {
-    background-color: #dc3545;
+ background-color: #dc3545;
     color: white;
     border: none;
     border-radius: 5px;
@@ -505,7 +507,7 @@ h1:hover {
     position: fixed; /* Fijo en la pantalla */
     top: 20px; /* Ajusta la posición vertical */
     right: 20px; /* Ajusta la posición horizontal */
-    z-index: 1000; /* A segúrate de que esté por encima de otros elementos */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
 .boton-menu {
@@ -572,7 +574,5 @@ h1:hover {
         right: 0; /* Alineado a la derecha */
     }
 }
-
-
     
 }

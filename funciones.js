@@ -11,6 +11,12 @@ const btnMenu = document.querySelector('#boton-menu'); // Botón de opciones
 const opcionesMenu = document.querySelector('#opciones-menu'); // Menú de opciones
 let total = 0;
 
+// Variables para las plantillas
+let plantillas = document.querySelectorAll('.template');
+let descripcionPlantilla = document.getElementById('descripcionPlantilla');
+let imagenVistaPrevia = document.getElementById('imagenVistaPrevia');
+let indiceFecha = 0;
+
 // Clase para los items del carrito
 class ItemCarrito {
     constructor(nombre, precio, cantidad) {
@@ -41,6 +47,9 @@ function inicializarEventos() {
 
     // Evento para el botón de opciones
     btnMenu.addEventListener('click', toggleOpcionesMenu);
+
+    // Inicializar la vista de plantillas
+    actualizarVista();
 }
 
 // Función para abrir el carrito
@@ -207,6 +216,25 @@ function mostrarNotificacionEnvio() {
     setTimeout(() => {
         overlay.remove();
     }, 3000);
+}
+
+// Funciones para manejar plantillas
+function usarPlantilla(plantillaId) {
+    const plantilla = document.getElementById(plantillaId);
+    const descripcion = plantilla.querySelector('p').textContent;
+    const imagen = plantilla.querySelector('.template-image').src;
+
+    descripcionPlantilla.textContent = descripcion;
+    imagenVistaPrevia.src = imagen;
+
+    mostrarNotificacion(`Plantilla "${descripcion}" aplicada.`);
+}
+
+function quitarPlantilla(plantillaId) {
+    descripcionPlantilla.textContent = '';
+    imagenVistaPrevia.src = '';
+
+    mostrarNotificacion(`Plantilla "${plantillaId}" quitada.`);
 }
 
 // Inicializar eventos cuando el DOM esté cargado

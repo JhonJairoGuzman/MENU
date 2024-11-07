@@ -487,6 +487,33 @@
         </div>
     </div>
 
+
+  <!-- Contenedor para las plantillas -->
+  <div class="plantillas-container">
+    <h2>Plantillas Disponibles</h2>
+    <div class="template" id="plantilla1">
+        <img class="template-image" src="ruta/a/imagen1.jpg" alt="Plantilla 1">
+        <p>Descripción de la Plantilla 1</p>
+        <button onclick="usarPlantilla('plantilla1')">Usar Plantilla 1</button>
+        <button onclick="quitarPlantilla('plantilla1')">Quitar Plantilla 1</button>
+    </div>
+    <div class="template" id="plantilla2">
+        <img class="template-image" src="ruta/a/imagen2.jpg" alt="Plantilla 2">
+        <p>Descripción de la Plantilla 2</p>
+        <button onclick="usarPlantilla('plantilla2')">Usar Plantilla 2</button>
+        <button onclick="quitarPlantilla('plantilla2')">Quitar Plantilla 2</button>
+    </div>
+    <!-- Agrega más plantillas según sea necesario -->
+</div>
+
+<!-- Contenedor para mostrar la plantilla seleccionada -->
+<div>
+    <h2>Descripción de la Plantilla Seleccionada:</h2>
+    <p id="descripcionPlantilla"></p>
+    <img id="imagenVistaPrevia" src="" alt="Vista Previa" />
+</div>
+
+
    <!-- Contenedor para los botones de abrir y cerrar carrito -->
 <div class="boton-container">
     <button id="abrir-carrito" class="boton-carrito">Abrir Carrito</button>

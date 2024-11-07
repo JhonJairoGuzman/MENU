@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Plantillas para Celebraciones</title>
+    <link rel="stylesheet" href="plantillas.css"> <!-- Enlazando el archivo CSS -->
+    <script src="plantillas.js" defer></script> <!-- Enlazando el archivo JavaScript -->
+</head>
+<body>
+
+<header>
+    <h1>Seleccionar Plantillas para Navidad</h1>
+</header>
+
+<main>
+    <section id="plantillasContainer">
+        <h2 class="section-title">Plantillas Disponibles</h2>
+        <div class="template-list">
+            <div class="template" data-fecha="velitas">
+                <img src="img/plantilla1.png" alt="Plantilla 1" class="template-image">
+                <h3>Plantilla 1 <span style="font-size: 1.5em;">🕯️</span></h3>
+                <p>Descripción de la plantilla 1 para el Día de las Velitas.</p>
+                <div class="button-container">
+                    <button onclick="usarPlantilla('velitas1')">Usar Plantilla</button>
+                    <button onclick="quitarPlantilla('velitas1')">Quitar Plantilla</button>
+                </div>
+            </div>
+            <div class="template" data-fecha="velitas">
+                <img src="/img/plantilla2.png" alt="Plantilla 2" class="template-image">
+                <h3>Plantilla 2 <span style="font-size: 1.5em;">🕯️</span></h3>
+                <p>Descripción de la plantilla 2 para el Día de las Velitas.</p>
+                <div class="button-container">
+                    <button onclick="usarPlantilla('velitas2')">Usar Plantilla</button>
+                    <button onclick="quitarPlantilla('velitas2')">Quitar Plantilla</button>
+                </div>
+            </div>
+            <div class="template" data-fecha="diciembre24">
+                <img src="/img/plantilla3.png" alt="Plantilla 1" class="template-image">
+                <h3>Plantilla 1 <span style="font-size: 1.5em;">🎄</span></h3>
+                <p>Descripción de la plantilla 1 para el 24 de diciembre.</p>
+                <div class="button-container">
+                    <button onclick="usarPlantilla('diciembre24_1')">Usar Plantilla</button>
+                    <button onclick="quitarPlantilla('diciembre24_1')">Quitar Plantilla</button>
+                </div>
+            </div>
+            <div class="template" data-fecha="diciembre24">
+                <img src="/img/plantilla4.png" alt="Plantilla 2" class="template-image">
+                <h3>Plantilla 2 <span style="font-size: 1.5em;">🎄</span></h3>
+                <p>Descripción de la plantilla 2 para el 24 de diciembre.</p>
+                <div class="button-container">
+                    <button onclick="usarPlantilla('diciembre24_2')">Usar Plantilla</button>
+                    <button onclick="quitarPlantilla('diciembre24_2')">Quitar Plantilla</button>
+                </div>
+            </div>
+            <div class="template" data-fecha="anoNuevo">
+                <img src="/img/plantilla5.png" alt="Plantilla 1" class="template-image">
+                <h3>Plantilla 1 <span style="font-size: 1.5em;">🎉</span></h3>
+                <p>Descripción de la plantilla 1 para Año Nuevo.</p>
+                <div class="button-container">
+                    <button onclick="usarPlantilla('anoNuevo1')">Usar Plantilla</button>
+                    <button onclick="quitarPlantilla('anoNuevo1')">Quitar Plantilla</button>
+                </div>
+            </div>
+            <div class="template" data-fecha="anoNuevo">
+                <img src="/img/plantilla6.png" alt="Plantilla 2" class="template-image">
+                <h3>Plantilla 2 <span style="font-size: 1.5em;">🎉</span></h3>
+                <p>Descripción de la plantilla 2 para Año Nuevo.</p>
+ <div class="button-container">
+                    <button onclick="usarPlantilla('anoNuevo2')">Usar Plantilla</button>
+                    <button onclick="quitarPlantilla('anoNuevo2')">Quitar Plantilla</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="vista-previa">
+        <h2>Vista Previa</h2>
+        <img src="preview.jpg" alt="Vista Previa" class="preview-image">
+        <p>Descripción de la vista previa de la plantilla seleccionada.</p>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2023 Plantillas Navideñas. Todos los derechos reservados.</p>
+    <a href="#">Política de Privacidad</a>
+</footer>
+
+</body>
+</html>
