@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Navideños - The Renacer</title>
     <link rel="stylesheet" href="eventos.css">
+    <link rel="icon" href="../img/Logo_renacer.jpeg" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Festive&display=swap" rel="stylesheet">
+    <!-- SweetAlert2 CSS y JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .custom-alert {
+            font-family: 'Poppins', sans-serif;
+        }
+        .swal2-popup {
+            font-size: 1.2em;
+        }
+        .swal2-title {
+            color: #d4363d !important;
+        }
+        .swal2-confirm {
+            background-color: #d4363d !important;
+        }
+    </style>
+    <script src="eventos.js" defer></script>
 </head>
 <body>
     <div class="snowflakes" aria-hidden="true">
@@ -35,56 +53,53 @@
             <h2>✨ Celebraciones Decembrinas ✨</h2>
             
             <div class="evento">
-                <img src="velitas.jpg" alt="Día de las Velitas">
                 <h3>🕯️ Día de las Velitas</h3>
-                <p class="fecha">7 de Diciembre 2023</p>
+                <p class="fecha">7 de Diciembre 2024</p>
                 <div class="descripcion">
                     <p>Celebra con nosotros esta hermosa tradición colombiana:</p>
                     <ul>
-                        <li>Cena especial navideña</li>
+                        <li>suizo renacer + hamburguesa clasica </li>
                         <li>Música en vivo con villancicos</li>
-                        <li>Espectáculo de luces y faroles</li>
-                        <li>Natilla y buñuelos tradicionales</li>
+                        <li>obsequio de 7 velitas Navideñas</li>
                     </ul>
-                    <p class="precio">Precio por persona: $45.000</p>
-                    <a href="#" class="button reserva">Reservar Mesa</a>
+                    <p class="precio">Precio por persona: $35.000</p>
+                    <a href="#" class="button reserva">Pedir Combo</a>
                 </div>
             </div>
 
             <div class="evento">
-                <img src="nochebuena.jpg" alt="Noche Buena">
                 <h3>🎄 Noche Buena</h3>
-                <p class="fecha">24 de Diciembre 2023</p>
+                <p class="fecha">24 de Diciembre 2024</p>
                 <div class="descripcion">
                     <p>Disfruta de una mágica celebración navideña:</p>
                     <ul>
-                        <li>Cena gourmet navideña completa</li>
+                        <li>1 tamal de cerdo</li>
                         <li>Picadas especiales de The Renacer</li>
-                        <li>Show navideño en vivo</li>
+                        <li>Show de musica Navideñas</li>
                         <li>Regalo sorpresa para cada invitado</li>
-                        <li>Visita especial de Papa Noel</li>
+                        <li>hamburguesa especial</li>
                     </ul>
-                    <p class="precio">Precio por persona: $85.000</p>
-                    <a href="#" class="button reserva">Reservar Mesa</a>
+                    <p class="precio">Precio por persona: $50.000</p>
+                    <a href="#" class="button reserva">Pedir Combo</a>
                 </div>
             </div>
 
             <div class="evento">
-                <img src="añonuevo.jpg" alt="Año Nuevo">
                 <h3>✨ Fiesta de Año Nuevo</h3>
-                <p class="fecha">31 de Diciembre 2023</p>
+                <p class="fecha">31 de Diciembre 2024</p>
                 <div class="descripcion">
                     <p>Despide el año con una celebración inolvidable:</p>
                     <ul>
                         <li>Cena de gala con lo mejor de The Renacer</li>
-                        <li>Barra libre de bebidas</li>
-                        <li>Banda en vivo y DJ</li>
-                        <li>Cotillón y uvas de la suerte</li>
-                        <li>Espectáculo de fuegos artificiales</li>
-                        <li>Brunch de Año Nuevo (1 de enero)</li>
+                        <li>cocacola 1.5L</li>
+                        <li>uvas de la buena suerte</li>
+                        <li>salchipapa renacer </li>
+                        <li>pero especial</li>
+                        <li>espectaculo de fuegos artificiales</li>
+                        <li>cierre de año Nuevo/li>
                     </ul>
-                    <p class="precio">Precio por persona: $150.000</p>
-                    <a href="#" class="button reserva">Reservar Mesa</a>
+                    <p class="precio">Precio por persona: $45.000</p>
+                    <a href="#" class="button reserva">Pedir Combo</a>
                 </div>
             </div>
         </section>
@@ -94,39 +109,39 @@
             
             <div class="menu-item">
                 <h3>Combo Noche de Velitas</h3>
-                <p class="fecha">7 de Diciembre 2023</p>
+                <p class="fecha">7 de Diciembre 2024</p>
                 <ul>
                     <li>2 Hamburguesas Especiales</li>
                     <li>1 Salchipapa Renacer</li>
                     <li>4 Bebidas</li>
-                    <li>Precio Especial: $45.000 (Ahorro de $20.000)</li>
+                    <li>Precio Especial: $50.000 (Ahorro de $15.000)</li>
                 </ul>
-                <a href="#" class="button reserva">Reservar</a>
+                <a href="#" class="button reserva">Pedir Combo</a>
             </div>
 
             <div class="menu-item">
                 <h3>Festín Familiar Navideño</h3>
-                <p class="fecha">24 de Diciembre 2023</p>
+                <p class="fecha">24 de Diciembre 2024</p>
                 <ul>
                     <li>1 Picada para 6 personas</li>
                     <li>2 Hamburguesas La Renacer</li>
                     <li>6 Bebidas</li>
-                    <li>Precio Especial: $120.000 (Ahorro de $35.000)</li>
+                    <li>Precio Especial: $130.000 (Ahorro de $25.000)</li>
                 </ul>
-                <a href="#" class="button reserva">Reservar</a>
+                <a href="#" class="button reserva">Pedir Combo</a>
             </div>
 
             <div class="menu-item">
                 <h3>Mega Combo Año Nuevo</h3>
-                <p class="fecha">31 de Diciembre 2023</p>
+                <p class="fecha">31 de Diciembre 2024</p>
                 <ul>
                     <li>1 Picada para 4 personas</li>
                     <li>2 Suizos Renacer</li>
                     <li>2 Choripapas Especiales</li>
                     <li>8 Bebidas</li>
-                    <li>Precio Especial: $150.000 (Ahorro de $45.000)</li>
+                    <li>Precio Especial: $160.000 (Ahorro de $35.000)</li>
                 </ul>
-                <a href="#" class="button reserva">Reservar</a>
+                <a href="#" class="button reserva">Pedir Combo</a>
             </div>
         </section>
 
@@ -140,19 +155,18 @@
                     <li>2 Perros Renacer</li>
                     <li>1 Salchipapa Especial</li>
                     <li>4 Bebidas</li>
-                    <li>Precio: $80.000 (Ahorro de $25.000)</li>
+                    <li>Precio: $90.000 (Ahorro de $15.000)</li>
                 </ul>
                 <a href="#" class="button">Ordenar Ahora</a>
             </div>
 
             <div class="promocion">
-                <h3>Combo Amigos Fin de Año</ ```html
                 <h3>Combo Amigos Fin de Año</h3>
                 <ul>
                     <li>3 Hamburguesas Especiales</li>
                     <li>2 Choripapas Renacer</li>
                     <li>5 Bebidas</li>
-                    <li>Precio: $95.000 (Ahorro de $30.000)</li>
+                    <li>Precio: $120.000 (Ahorro de $10.000)</li>
                 </ul>
                 <a href="#" class="button">Ordenar Ahora</a>
             </div>
@@ -164,7 +178,7 @@
                     <li>1 Perro Renacer</li>
                     <li>1 Salchipapa Renacer</li>
                     <li>3 Bebidas</li>
-                    <li>Precio: $55.000 (Ahorro de $20.000)</li>
+                    <li>Precio: $65.000 (Ahorro de $10.000)</li>
                 </ul>
                 <a href="#" class="button">Ordenar Ahora</a>
             </div>
@@ -172,8 +186,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 The Renacer. Todos los derechos reservados.</p>
-        <a href="contacto.html" class="button">Contáctanos</a>
+        <p>&copy; 2024 The Renacer. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
