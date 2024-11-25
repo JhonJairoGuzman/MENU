@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif; /* O 'Montserrat', según tu preferencia */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,11 +15,12 @@ h1 {
     margin: 20px 0;
     text-align: center;
     font-size: 2.5em;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 h1:hover {
     color: #d23f57;
+    transform: scale(1.05); /* Añadido efecto de aumento */
 }
 
 .menu {
@@ -33,80 +34,80 @@ h1:hover {
 }
 
 .logo {
-    width: 10vw; /* Cambia a unidades relativas */
-    height: auto; /* Mantiene la proporción del logo */
-    max-width: 60px; /* Establece un tamaño máximo */
-    max-height: 60px; /* Establece un tamaño máximo */
+    width: 10vw;
+    height: auto;
+    max-width: 60px;
+    max-height: 60px;
     border-radius: 50%;
     position: absolute;
-    top: 2%; /* Cambia a unidades relativas */
-    left: 2%; /* Cambia a unidades relativas */
+    top: 2%;
+    left: 2%;
     overflow: hidden;
 }
 
 .logo img {
     width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Elimina el espacio debajo de la imagen */
+    height: auto;
+    display: block;
 }
 
 .button {
-    display: inline-block; /* Permite que el enlace se comporte como un bloque */
-    padding: 12px 24px; /* Espaciado interno */
-    font-size: 18px; /* Tamaño de fuente */
-    font-weight: bold; /* Negrita */
-    color: #fff; /* Color del texto */
-    background-color: red; /* Color de fondo */
-    border: none; /* Sin borde */
-    border-radius: 8px; /* Bordes redondeados */
-    text-decoration: none; /* Sin subrayado */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transiciones suaves */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    position: relative; /* Para el efecto de brillo */
-    overflow: hidden; /* Para ocultar el brillo que sale del botón */
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .button::before {
-    content: ''; /* Crea un pseudo-elemento */
-    position: absolute; /* Pos iciona el pseudo-elemento */
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    width: 300%; /* Aumenta el tamaño para el efecto de brillo */
-    height: 300%; /* Aumenta el tamaño para el efecto de brillo */
-    background: rgba(255, 255, 255, 0.3); /* Color del brillo */
-    border-radius: 50%; /* Bordes redondeados */
-    transform: translate(-50%, -50%) scale(0); /* Comienza oculto */
-    transition: transform 0.5s ease; /* Transición suave */
-    z-index: 0; /* Coloca detrás del texto */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: 0;
 }
 
 .button:hover::before {
-    transform: translate(-50%, -50%) scale(1); /* Muestra el brillo al pasar el mouse */
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .button:hover {
-    background-color: darkred; /* Color de fondo al pasar el mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
-    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    background-color: darkred;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px); /* Efecto de elevación */
 }
 
 .button:active {
-    transform: scale(0.95); /* Efecto de reducción al hacer clic */
+    transform: scale(0.95);
 }
 
 /* Media queries para ajustar el tamaño en diferentes dispositivos */
 @media (max-width: 768px) {
     .logo {
-        width: 15vw; /* Aumenta el tamaño en pantallas más pequeñas */
+        width: 15vw;
         max-width: 50px;
-        max-height: 50 px;
+        max-height: 50px;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 20vw; /* Aumenta el tamaño en pantallas móviles */
+        width: 20vw;
         max-width: 40px;
         max-height: 40px;
     }
@@ -133,7 +134,7 @@ h1:hover {
     margin-top: 0;
     font-size: 1.8em;
     text-align: center;
-    border-bottom: 2px solid #d23f57;
+    border-bottom: 2px solid #d23 f57;
     padding-bottom: 10px;
 }
 
@@ -143,7 +144,7 @@ h1:hover {
     align-items: center;
     padding: 15px 0;
     border-bottom: 1px solid #eee;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Añadido efecto de transformación */
     width: 100%;
 }
 
@@ -153,6 +154,7 @@ h1:hover {
 
 .producto:hover {
     background-color: #f0f0f0;
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
 }
 
 .producto img {
@@ -164,7 +166,7 @@ h1:hover {
 }
 
 .producto img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1); /* Aumento de imagen al pasar el mouse */
 }
 
 .producto-info {
@@ -266,7 +268,7 @@ h1:hover {
 }
 
 .contacto a:hover {
-    color: #c0392b; /* Color más oscuro al pasar el mouse */
+    color: #c0392b;
     border-bottom: 1px solid #c0392b;
 }
 
@@ -276,17 +278,14 @@ h1:hover {
 .contacto .fa-money-bill-wave { color: #27ae60; }
 .contacto .fa-university { color: #3498db; }
 
-
-
-
 /* Estilos para el carrito de compras */
 #carrito-container {
     position: fixed;
     right: 10px;
-    bottom: 0; /* Cambiado a la parte inferior */
-    width: 300px; /* Tamaño predeterminado para desktop */
-    height: auto; /* Ajustado para que se adapte al contenido */
-    background-color: black; /* Color negro para el contenedor */
+    bottom: 0;
+    width: 300px;
+    height: auto;
+    background-color: black;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 100;
@@ -301,7 +300,7 @@ h1:hover {
 
 #carrito h2 {
     text-align: center;
-    color: #ffffff; /* Color del texto en el carrito */
+    color: #ffffff;
     margin-bottom: 15px;
     border-bottom: 2px solid #d23f57;
     padding-bottom: 10px;
@@ -318,7 +317,7 @@ h1:hover {
     padding: 10px;
     border-bottom: 1px solid #eee;
     font-size: 0.9em;
-    color: #ffffff; /* Color del texto en los items del carrito */
+    color: #ffffff;
 }
 
 #total {
@@ -326,7 +325,7 @@ h1:hover {
     text-align: right;
     margin: 15px 0;
     font-size: 1.2em;
-    color: #d23f57; /* Color del total */
+    color: #d23f57;
 }
 
 .btn-enviar, .btn-vaciar {
@@ -334,7 +333,7 @@ h1:hover {
     padding: 10px;
     margin: 5px 0;
     border: none;
-    border-radius: 5px; /* Corregido el espacio */
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
@@ -427,7 +426,7 @@ h1:hover {
 
 /* Estilos del botón Cerrar Carrito */
 .boton-cerrar-carrito {
- background-color: #dc3545;
+    background-color: #dc3545;
     color: white;
     border: none;
     border-radius: 5px;
@@ -443,16 +442,16 @@ h1:hover {
 /* Media queries para hacer el carrito responsive */
 @media (max-width: 750px) {
     #carrito-container {
-        position: relative; /* Cambiado a relative para que se posicione debajo de los productos */
-        margin-top: 20px; /* Espacio entre los productos y el carrito */
+        position: relative;
+        margin-top: 20px;
         padding: 20px;
-        background-color: black; /* Color negro para el contenedor */
+        background-color: black;
         border-radius: 15px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
     
     .productos {
-        margin-bottom: 20px; /* Espacio entre los productos y el carrito */
+        margin-bottom: 20px;
     }
     
     .producto {
@@ -473,7 +472,7 @@ h1:hover {
     }
 }
 
-/* Estilos para los botones flotantes */
+/* Estilos para los botones flot antes */
 #toggle-carrito {
     display: none; /* Oculto por defecto, se mostrará en móviles */
 }
@@ -503,76 +502,75 @@ h1:hover {
         background-color: #c0392b; /* Color más oscuro al pasar el mouse */
     }
 
-.menu-desplegable {
-    position: fixed; /* Fijo en la pantalla */
-    top: 20px; /* Ajusta la posición vertical */
-    right: 20px; /* Ajusta la posición horizontal */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-}
-
-.boton-menu {
-    background-color: #4CAF50; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 15px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
-}
-
-.boton-menu:hover {
-    background-color: #45a049; /* Color de fondo al pasar el mouse */
-}
-
-.opciones {
-    display: none; /* Oculto por defecto */
-    position: absolute; /* Posicionamiento absoluto */
-    top: 40px; /* Ajusta la posición vertical del menú desplegable */
-    right: 0; /* Alineado a la derecha */
-    background-color: white; /* Color de fondo del menú */
-    border: 1px solid #ccc; /* Borde del menú */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del menú */
-    z-index: 999; /* Asegúrate de que esté por encima de otros elementos */
-}
-
-.opciones ul {
-    list-style-type: none; /* Sin viñetas */
-    padding: 0; /* Sin padding */
-    margin: 0; /* Sin margen */
-}
-
-.opciones li {
-    padding: 10px; /* Espaciado interno de cada opción */
-}
-
-.opciones li a {
-    text-decoration: none; /* Sin subrayado */
-    color: #333; /* Color del texto */
-    display: block; /* Hace que el área clickeable sea toda la opción */
-}
-
-.opciones li:hover {
-    background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
     .menu-desplegable {
-        top: 10px; /* Ajusta la posición vertical en móviles */
-        right: 10px; /* Ajusta la posición horizontal en móviles */
+        position: fixed; /* Fijo en la pantalla */
+        top: 20px; /* Ajusta la posición vertical */
+        right: 20px; /* Ajusta la posición horizontal */
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
     }
 
     .boton-menu {
-        padding: 10px 15px; /* Ajusta el espaciado interno en móviles */
-        font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+        background-color: #4CAF50; /* Color de fondo */
+        color: white; /* Color del texto */
+        padding: 10px 15px; /* Espaciado interno */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        font-size: 16px; /* Tamaño de fuente */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    }
+
+    .boton-menu:hover {
+        background-color: #45a049; /* Color de fondo al pasar el mouse */
     }
 
     .opciones {
-        width: 100%; /* Ancho completo en móviles */
+        display: none; /* Oculto por defecto */
+        position: absolute; /* Posicionamiento absoluto */
+        top: 40px; /* Ajusta la posición vertical del menú desplegable */
         right: 0; /* Alineado a la derecha */
+        background-color: white; /* Color de fondo del menú */
+        border: 1px solid #ccc; /* Borde del menú */
+        border-radius: 5px; /* Bordes redondeados */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del menú */
+        z-index: 999; /* Asegúrate de que esté por encima de otros elementos */
     }
-}
-    
+
+    .opciones ul {
+        list-style-type: none; /* Sin viñetas */
+        padding: 0; /* Sin padding */
+        margin: 0; /* Sin margen */
+    }
+
+    .opciones li {
+        padding: 10px; /* Espaciado interno de cada opción */
+    }
+
+    .opciones li a {
+        text-decoration: none; /* Sin subrayado */
+        color: #333; /* Color del texto */
+        display: block; /* Hace que el área clickeable sea toda la opción */
+    }
+
+    .opciones li:hover {
+        background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 768px) {
+        .menu-desplegable {
+            top: 10px; /* Ajusta la posición vertical en móviles */
+            right: 10px; /* Ajusta la posición horizontal en móviles */
+        }
+
+        .boton-menu {
+            padding: 10px 15px; /* Ajusta el espaciado interno en móviles */
+            font-size: 14px; /* Tamaño de fuente más pequeño en móviles */
+        }
+
+        .opciones {
+            width: 100%; /* Ancho completo en móviles */
+            right: 0; /* Alineado a la derecha */
+        }
+    }
 }

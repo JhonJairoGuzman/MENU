@@ -26,6 +26,11 @@
     <script src="eventos.js" defer></script>
 </head>
 <body>
+    <!-- Música de fondo -->
+    <audio id="musica-navidad" src="audios/Feliz Navidad Instrumental.m4a" loop autoplay></audio>
+    <!-- Sonido de "jojojo" -->
+    <audio id="sonido-navidad" src="audios/La Mejor Voz De Santa.mp3"></audio>
+
     <div class="snowflakes" aria-hidden="true">
         <div class="snowflake">❅</div>
         <div class="snowflake">❆</div>
@@ -44,7 +49,6 @@
         <nav>
             <a href="index.html" class="button">Inicio</a>
             <a href="eventos.html" class="button">Even-2025-proximamente</a>
-            <a href="plantillas.html" class="button">Plantillas</a>
         </nav>
     </header>
 
@@ -63,7 +67,7 @@
                         <li>obsequio de 7 velitas Navideñas</li>
                     </ul>
                     <p class="precio">Precio por persona: $35.000</p>
-                    <a href="#" class="button reserva">Pedir Combo</a>
+                    <a href="#" class="button reserva" onclick="reproducirSonido()">Pedir Combo</a>
                 </div>
             </div>
 
@@ -80,7 +84,7 @@
                         <li>hamburguesa especial</li>
                     </ul>
                     <p class="precio">Precio por persona: $50.000</p>
-                    <a href="#" class="button reserva">Pedir Combo</a>
+                    <a href="#" class="button reserva" onclick="reproducirSonido()">Pedir Combo</a>
                 </div>
             </div>
 
@@ -93,13 +97,13 @@
                         <li>Cena de gala con lo mejor de The Renacer</li>
                         <li>cocacola 1.5L</li>
                         <li>uvas de la buena suerte</li>
-                        <li>salchipapa renacer </li>
+                        <li>salchipapa renacer</li>
                         <li>pero especial</li>
                         <li>espectaculo de fuegos artificiales</li>
-                        <li>cierre de año Nuevo/li>
+                        <li>cierre de año Nuevo</li>
                     </ul>
                     <p class="precio">Precio por persona: $45.000</p>
-                    <a href="#" class="button reserva">Pedir Combo</a>
+                    <a href="#" class="button reserva" onclick="reproducirSonido()">Pedir Combo</a>
                 </div>
             </div>
         </section>
@@ -116,7 +120,7 @@
                     <li>4 Bebidas</li>
                     <li>Precio Especial: $50.000 (Ahorro de $15.000)</li>
                 </ul>
-                <a href="#" class="button reserva">Pedir Combo</a>
+                <a href="#" class="button reserva" onclick="reproducirSonido()">Pedir Combo</a>
             </div>
 
             <div class="menu-item">
@@ -128,7 +132,7 @@
                     <li>6 Bebidas</li>
                     <li>Precio Especial: $130.000 (Ahorro de $25.000)</li>
                 </ul>
-                <a href="#" class="button reserva">Pedir Combo</a>
+                <a href="#" class="button reserva" onclick="reproducirSonido()">Pedir Combo</a>
             </div>
 
             <div class="menu-item">
@@ -141,7 +145,7 @@
                     <li>8 Bebidas</li>
                     <li>Precio Especial: $160.000 (Ahorro de $35.000)</li>
                 </ul>
-                <a href="#" class="button reserva">Pedir Combo</a>
+                <a href="#" class="button reserva" onclick="reproducirSonido()">Pedir Combo</a>
             </div>
         </section>
 
@@ -155,9 +159,9 @@
                     <li>2 Perros Renacer</li>
                     <li>1 Salchipapa Especial</li>
                     <li>4 Bebidas</li>
-                    <li>Precio: $90.000 (Ahorro de $15.000)</li>
+                    <li>Precio: $90.000 (Ahorro: $15.000)</li>
                 </ul>
-                <a href="#" class="button">Ordenar Ahora</a>
+                <a href="#" class="button" onclick="reproducirSonido()">Ordenar Ahora</a>
             </div>
 
             <div class="promocion">
@@ -166,10 +170,9 @@
                     <li>3 Hamburguesas Especiales</li>
                     <li>2 Choripapas Renacer</li>
                     <li>5 Bebidas</li>
-                    <li>Precio: $120.000 (Ahorro de $10.000)</li>
+                    <li>Precio: $120.000 (Ahorro: $10.000)</li>
                 </ul>
-                <a href="#" class="button">Ordenar Ahora</a>
-            </div>
+                <a href="#" class="button" onclick="reproducirSonido()">Ordenar Ahora</a</div>
 
             <div class="promocion">
                 <h3>Mega Combo Renacer</h3>
@@ -178,9 +181,9 @@
                     <li>1 Perro Renacer</li>
                     <li>1 Salchipapa Renacer</li>
                     <li>3 Bebidas</li>
-                    <li>Precio: $65.000 (Ahorro de $10.000)</li>
+                    <li>Precio: $65.000 (Ahorro: $10.000)</li>
                 </ul>
-                <a href="#" class="button">Ordenar Ahora</a>
+                <a href="#" class="button" onclick="reproducirSonido()">Ordenar Ahora</a>
             </div>
         </section>
     </main>
@@ -188,5 +191,13 @@
     <footer>
         <p>&copy; 2024 The Renacer. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function reproducirSonido() {
+            const sonidoNavidad = document.getElementById('sonido-navidad');
+            sonidoNavidad.currentTime = 0; // Reinicia el sonido
+            sonidoNavidad.play(); // Reproduce el sonido
+        }
+    </script>
 </body>
 </html>
