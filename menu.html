@@ -15,626 +15,726 @@
         <img src="/img/Logo_renacer.jpeg" alt="Logo de The Renacer">
     </div>
     <h1>MENÚ - THE RENACER</h1>
-    <a href="eventos.html" class="button">Eventos</a>
+  
     
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#hamburguesas">Hamburguesas</a></li>
+            <li><a href="#perros-calientes">Perros Calientes</a></li>
+            <li><a href="#salchipapas">Salchipapas</a></li>
+            <li><a href="#suizo">Suizo</a></li>
+            <li><a href="#picadas">Picadas</a></li>
+            <li><a href="#adiciones">Adiciones</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+        </ul>
+    </nav>
+
     <div class="menu">
         <!-- Categoría Hamburguesas --> 
-        <div class="categoria">
+        <section class="categoria" id="hamburguesas">
             <h2>Hamburguesas</h2>
-            <!-- Hamburguesa Sencilla -->
-            <div class="producto">
-                <img src="/img/hamburguesaSencilla.png" alt="Hamburguesa Sencilla">
-                <div class="producto-info">
-                    <h3>Sencilla</h3>
-                    <p class="precio">$9,000</p>
-                    <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Lechuga,  Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+            <div class="productos">
+                <!-- Hamburguesa Sencilla -->
+                <div class="producto">
+                    <img src="/img/hamburguesaSencilla.png" alt="Hamburguesa Sencilla">
+                    <div class="producto-info">
+                        <h3>Sencilla</h3>
+                        <p class="precio">$9,000</p>
+                        <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Lechuga, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Especial -->
+                <div class="producto">
+                    <img src="/img/mini_especial.jpg" alt="Mini Especial">
+                    <div class="producto-info">
+                        <h3>Mini Especial</h3>
+                        <p class="precio">$11,000</p>
+                        <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Jamón, Lechuga, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Especial -->
+                <div class="producto">
+                    <img src="/img/hamburguesaEspecial.jpg" alt="Hamburguesa Especial">
+                    <div class="producto-info">
+                        <h3>Especial</h3>
+                        <p class="precio">$15,000</p>
+                        <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Jamón, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doble -->
+                <div class="producto">
+                    <img src="/img/doble_carne.jpg" alt="Hamburguesa Doble">
+                    <div class="producto-info">
+                        <h3>Doble</h3>
+                        <p class="precio">$18,000</p>
+                        <p class="ingredientes">Pan hamburguesa, 2 Carnes artesanales, Queso mozzarella, Jamón, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ranchera -->
+                <div class="producto">
+                    <img src="/img/ranchera.jpg" alt="Hamburguesa Ranchera">
+                    <div class="producto-info">
+                        <h3>Ranchera</h3>
+                        <p class="precio">$16,000</p>
+                        <p class="ingredientes">Pan hamburguesa, Ranchera, Queso mozzarella, Jamón, Tocineta, Lechuga, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suiza -->
+                <div class="producto">
+                    <img src="/img/suiza.jpg" alt="Hamburguesa Suiza">
+                    <div class="producto-info">
+                        <h3>Suiza</h3>
+                        <p class="precio">$19,000</p>
+                        <p class="ingredientes">Pan hamburguesa, Carne artesanal, Suiza, Queso mozzarella, Jamón, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bañada en Queso -->
+                <div class="producto">
+                    <img src="/img/banada_queso.jpg" alt="Hamburguesa Bañada en Queso">
+                    <div class="producto-info">
+                        <h3>Bañada en Queso</h3>
+                        <p class="precio">$13,000</p>
+                        <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Queso derretido, Jamón en cuadros, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doble Bañada en Queso -->
+                <div class="producto">
+                    <img ```html
+                    src="/img/doble_banada_queso.jpg" alt="Doble Bañada en Queso">
+                    <div class="producto-info">
+                        <h3>Doble Bañada en Queso</h3>
+                        <p class="precio">$20,000</p>
+                        <p class="ingredientes">Pan hamburguesa, 2 Carnes artesanales, Queso mozzarella, Queso derretido, Jamón en cuadros, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- La Renacer -->
+                <div class="producto">
+                    <img src="/img/renacer.jpg" alt="Hamburguesa La Renacer">
+                    <div class="producto-info">
+                        <h3>La Renacer</h3>
+                        <p class="precio">$25,000</p>
+                        <p class="ingredientes">Pan hamburguesa, 3 Carnes artesanales, Queso mozzarella, Queso Americano, Papas Francesa, Jamón en cuadros, Tocineta, Lechuga, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la hamburguesa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Mini Especial -->
-            <div class="producto">
-                <img src="/img/mini_especial.jpg" alt="Mini Especial">
-                <div class="producto-info">
-                    <h3>Mini Especial</h3>
-                    <p class="precio">$11,000</p>
-                    <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Jamón, Lechuga, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Especial -->
-            <div class="producto">
-                <img src="/img/hamburguesaEspecial.jpg" alt="Hamburguesa Especial">
-                <div class="producto-info">
-                    <h3>Especial</h3>
-                    <p class="precio">$15,000</p>
-                    <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Papas, Jamón, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Doble -->
-            <div class="producto">
-                <img src="/img/doble_carne.jpg" alt="Hamburguesa Doble">
-                <div class="producto-info">
-                    <h3>Doble</h3>
-                    <p class="precio">$18,000</p>
-                    <p class="ingredientes">Pan hamburguesa, 2 Carnes artesanales, Queso mozzarella, Jamón, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Ranchera -->
-            <div class="producto">
-                <img src="/img/ranchera.jpg" alt="Hamburguesa Ranchera">
-                <div class="producto-info">
-                    <h3>Ranchera</h3>
-                    <p class="precio">$16,000</p>
-                    <p class="ingredientes">Pan hamburguesa, Ranchera, Queso mozzarella, Jamón, Tocineta, Lechuga, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Suiza -->
-            <div class="producto">
-                <img src="/img/suiza.jpg" alt="Hamburguesa Suiza">
-                <div class="producto-info">
-                    <h3>Suiza</h3>
-                    <p class="precio">$19,000</p>
-                    <p class="ingredientes">Pan hamburguesa, Carne artesanal, Suiza, Queso mozzarella, Jamón, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Bañada en Queso -->
-            <div class="producto">
-                <img src="/img/banada_queso.jpg" alt="Hamburguesa Bañada en Queso">
-                <div class="producto-info">
-                    <h3>Bañada en Queso</h3>
-                    <p class="precio">$13,000</p>
-                    <p class="ingredientes">Pan hamburguesa, Carne artesanal, Queso mozzarella, Queso derretido, Jamón en cuadros, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Doble Bañada en Queso -->
-            <div class="producto">
-                <img src="/img/doble_banada_queso.jpg" alt="Doble Bañada en Queso">
-                <div class="producto-info">
-                    <h3>Doble Bañada en Queso</h3>
-                    <p class="precio">$20,000</p>
-                    <p class="ingredientes">Pan hamburguesa, 2 Carnes artesanales, Queso mozzarella, Queso derretido, Jamón en cuadros, Tocineta, Lechuga, Tomate, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- La Renacer -->
-            <div class="producto">
-                <img src="/img/renacer.jpg" alt="Hamburguesa La Renacer">
-                <div class="producto-info">
-                    <h3>La Renacer</h3>
-                    <p class="precio">$25,000</p>
-                    <p class="ingredientes">Pan hamburguesa, 3 Carnes artesanales, Queso mozzarella, Queso Americano,  Jamón en cuadros, Tocineta, Lechuga, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de hamburguesas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Categoría Perros Calientes -->
-        <div class="categoria">
+        </section>
+
+        <!-- Categoría Perros Calientes --> 
+        <section class="categoria" id="perros-calientes">
             <h2>Perros Calientes</h2>
-            <!-- Perro Sencillo -->
-            <div class="producto">
-                <img src="/img/perro_sencillo.jpg" alt="Perro Sencillo">
-                <div class="producto-info">
-                    <h3>Perro Sencillo</h3>
-                    <p class="precio">$6,000</p>
-                    <p class="ingredientes">Pan perro, Salchicha, Queso mozarella, Papas fosforito, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+            <div class="productos">
+                <!-- Perro Sencillo -->
+                <div class="producto">
+                    <img src="/img/perro_sencillo.jpg" alt="Perro Sencillo">
+                    <div class="producto-info">
+                        <h3>Perro Sencillo</h3>
+                        <p class="precio">$6,000</p>
+                        <p class="ingredientes">Pan perro, Salchicha, Queso mozarella, Papas fosforito, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del perro caliente">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perro Mini Especial -->
+                <div class="producto">
+                    <img src="/img/perro_mini_especial.jpg" alt="Perro Mini Especial">
+                    <div class="producto-info">
+                        <h3>Perro Mini Especial</h3>
+                        <p class="precio">$7,000</p>
+                        <p class="ingredientes">Pan perro, Salchicha, Ripio, Lechuga, Cebolla, Jamón, Queso, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del perro caliente">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perro Especial -->
+                <div class="producto">
+                    <img src="/img/perro_especial.jpg" alt="Perro Especial">
+                    <div class="producto-info">
+                        <h3>Perro Especial</h3>
+                        <p class="precio">$8,000</p>
+                        <p class="ingredientes">Pan perro, Salchicha, Rip io, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del perro caliente">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choriperro -->
+                <div class="producto">
+                    <img src="/img/choriperro.jpg" alt="Choriperro">
+                    <div class="producto-info">
+                        <h3>Choriperro</h3>
+                        <p class="precio">$10,000</p>
+                        <p class="ingredientes">Pan perro, Chorizo, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del perro caliente">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perro Ranchero -->
+                <div class="producto">
+                    <img src="/img/perro_ranchero.jpg" alt="Perro Ranchero">
+                    <div class="producto-info">
+                        <h3>Perro Ranchero</h3>
+                        <p class="precio">$11,000</p>
+                        <p class="ingredientes">Pan perro, Ranchera, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del perro caliente">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perro Suizo -->
+                <div class="producto">
+                    <img src="/img/perro_suizo.jpg" alt="Perro Suizo">
+                    <div class="producto-info">
+                        <h3>Perro Suizo</h3>
+                        <p class="precio">$13,000</p>
+                        <p class="ingredientes">Pan perro, Suiza, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del perro caliente">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Perro Renacer -->
+                <div class="producto">
+                    <img src="/img/perro_renacer.jpg" alt="Perro Renacer">
+                    <div class="producto-info">
+                        <h3>Perro Renacer</h3>
+                        <p class="precio">$15,000</p>
+                        <p class="ingredientes">Pan perro, Salchicha, Pollo, Maíz, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del perro caliente">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Perro Mini Especial -->
-            <div class="producto">
-                <img src="/img/perro_mini_especial.jpg" alt="Perro Mini Especial">
-                <div class="producto-info">
-                    <h3>Perro Mini Especial</h3>
-                    <p class="precio">$7,000</p>
-                    <p class="ingredientes">Pan perro, Salchicha, Ripio, Lechuga, Cebolla, Jamón, Queso, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Perro Especial -->
-            <div class="producto">
-                <img src="/img/perro_especial.jpg" alt="Perro Especial">
-                <div class="producto-info">
-                    <h3>Perro Especial</h3>
-                    <p class="precio">$8,000</p>
-                    <p class="ingredientes">Pan perro, Salchicha, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Choriperro -->
-            <div class="producto">
-                <img src="/img/choriperro.jpg" alt="Choriperro">
-                <div class="producto-info">
-                    <h3>Choriperro</h3>
-                    <p class="precio">$10,000</p>
-                    <p class="ingredientes">Pan perro, Chorizo, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Perro Ranchero -->
-            <div class="producto">
-                <img src="/img/perro_ranchero.jpg" alt="Perro Ranchero">
-                <div class="producto-info">
-                    <h3>Perro Ranchero</h3>
-                    <p class="precio">$11,000</p>
-                    <p class="ingredientes">Pan perro, Ranchera, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Perro Suizo -->
-            <div class="producto">
-                <img src="/img/perro_suizo.jpg" alt="Perro Suizo">
-                <div class="producto-info">
-                    <h3 >Perro Suizo</h3>
-                    <p class="precio">$13,000</p>
-                    <p class="ingredientes">Pan perro, Suiza, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Perro Renacer -->
-            <div class="producto">
-                <img src="/img/perro_renacer.jpg" alt="Perro Renacer">
-                <div class="producto-info">
-                    <h3>Perro Renacer</h3>
-                    <p class="precio">$15,000</p>
-                    <p class="ingredientes">Pan perro, Salchicha, Pollo, Maíz, Ripio, Lechuga, Cebolla, Jamón, Tocineta, Queso, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de perros calientes">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Categoría Salchipapas -->
-        <div class="categoria">
+        </section>
+
+        <!-- Categoría Salchipapas --> 
+        <section class="categoria" id="salchipapas">
             <h2>Salchipapas</h2>
-            <!-- Salchipapa Sencilla -->
-            <div class="producto">
-                <img src="/img/salchipapa_sencilla.jpg" alt="Salchipapa Sencilla">
-                <div class="producto-info">
-                    <h3>Salchipapa Sencilla</h3>
-                    <p class="precio">$10,000</p>
-                    <p class="ingredientes">Papas Fritas, Salchicha, Ripio, Queso costeño, Lechuga, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+            <div class="productos">
+                <!-- Salchipapa Sencilla -->
+                <div class="producto">
+                    <img src="/img/salchipapa_sencilla.jpg" alt="Salchipapa Sencilla">
+                    <div class="producto-info">
+                        <h3>Salchipapa Sencilla</h3>
+                        <p class="precio">$10,000</p>
+                        <p class="ingredientes">Papas francesa, Salchicha, Ripio, Queso costeño, Lechuga, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salchipapa Mini Especial -->
+                <div class="producto">
+                    <img src="/img/salchipapa_mini_especial.jpg" alt="Salchipapa Mini Especial">
+                    <div class="producto-info">
+                        <h3>Salchipapa Mini Especial</h3>
+                        <p class="precio">$13,000</p>
+                        <p class="ingredientes">Papas francesa, Salchicha, Ripio, Lomo de cerdo, Queso costeño, Lechuga, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salchipapa Especial -->
+                <div class="producto">
+                    <img src="/img/salchipapa_especial.jpg" alt="Salchipapa Especial">
+                    <div class="producto-info">
+                        <h3>Salchipapa Especial</h3>
+                        <p class="precio">$16,000</p>
+                        <p class="ingredientes">Papas francesa, Salchicha, Ripio, Lomo de cerdo, Lechuga, Queso mozzarella, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salchipapa Renacer -->
+                <div class="producto">
+                    <img src="/img/salchipapa_renacer.jpg" alt="Salchipapa Renacer">
+                    <div class="producto-info">
+                        <h3>Salchipapa Renacer</h3>
+                        <p class="precio">$25,000</p>
+                        <p class="ingredientes">Papas francesa, Salchicha, Ripio, Lomo de cerdo, Pollo, Queso mozzarella, Tocineta, Lechuga, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choripapa Sencilla -->
+                <div class="producto">
+                    <img src="/img/choripapa.jpg" alt="Choripapa Sencilla">
+                    <div class="producto-info">
+                        <h3>Choripapa Sencilla</h3>
+                        <p class="precio">$11,000</p>
+                        <p class="ingredientes">Papas francesa, Chorizo, Ripio, Lechuga, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choripapa Mini Especial -->
+                <div class="producto">
+                    <img src="/img/choripapa.jpg" alt="Choripapa Mini Especial">
+                    <div class="producto-info">
+                        <h3>Choripapa Mini Especial</h3>
+                        <p class="precio">$14,000</p>
+                        <p class="ingredientes">Papas Francesa, Chorizo, Queso costeño, Cebolla, Lechuga, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choripapa Especial -->
+                <div class="producto">
+                    <img src="/img/choripapa.jpg" alt="Choripapa Especial">
+                    <div class="producto-info">
+                        <h3>Choripapa Especial</h3>
+                        <p class="precio">$18,000</p>
+                        <p class="ingredientes">Papas Francesa, Chorizo, Queso mozzarella, Lomo de cerdo, Tocineta, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choripapa Renacer -->
+                <div class="producto">
+                    <img src="/img/choripapa.jpg" alt="Choripapa Renacer">
+                    <div class="producto-info">
+                        <h3>Choripapa Renacer</h3>
+                        <p class="precio">$27,000</p>
+                        <p class="ingredientes">Papas Francesa, Chorizo, Lomo de cerdo, Queso mozzarella, Pollo, Maíz, Tocineta, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la salchipapa">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Salchipapa Mini Especial -->
-            <div class="producto">
-                <img src="/img/salchipapa_mini_especial.jpg" alt="Salchipapa Mini Especial">
-                <div class="producto-info">
-                    <h3>Salchipapa Mini Especial</h3>
-                    <p class="precio">$13,000</p>
-                    <p class="ingredientes">Papas Fritas, Salchicha, Ripio, Lomo de cerdo, Queso costeño, Lechuga, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Salchipapa Especial -->
-            <div class="producto">
-                <img src="/img/salchipapa_especial.jpg" alt="Salchipapa Especial">
-                <div class="producto-info">
-                    <h3>Salchipapa Especial</h3>
-                    <p class="precio">$16,000</p>
-                    <p class="ingredientes">Papas Fritas, Salchicha, Ripio, Lomo de cerdo, Lechuga, Queso mozzarella, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Salchipapa Renacer -->
-            <div class="producto">
-                <img src="/img/salchipapa_renacer.jpg" alt="Salchipapa Renacer">
-                <div class="producto-info">
-                    <h3>Salchipapa Renacer</h3>
-                    <p class="precio">$25,000</p>
-                    <p class="ingredientes">Papas Fritas, Salchicha, Ripio, Lomo de cerdo, pollo, Queso mozzarella, Tocineta, Lechuga, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de salchipapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Choripapa Sencilla -->
-            <div class="producto">
-                <img src="/img/choripapa.jpg" alt="Choripapa Sencilla">
-                <div class="producto-info">
-                    <h3>Choripapa Sencilla</h3>
-                    <p class="precio">$11,000</p>
-                    <p class="ingredientes">Papas Fritas, Chorizo, Ripio,  Lechuga, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de choripapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Choripapa Mini Especial -->
-            <div class="producto">
-                <img src="/img/choripapa.jpg" alt="Choripapa Mini Especial">
-                <div class="producto-info">
-                    <h3>Choripapa Mini Especial</h3>
-                    <p class="precio">$14,000</p>
-                    <p class="ingredientes">Papas Fritas, Chorizo, Queso costeño, Cebolla, Lechuga, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de choripapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Choripapa Especial -->
-            <div class="producto">
-                <img src="/img/choripapa.jpg" alt="Choripapa Especial">
-                <div class="producto-info">
-                    <h3>Choripapa Especial</h3>
-                    <p class="precio">$18,000</p>
-                    <p class="ingredientes">Papas Fritas, Chorizo, Queso mozzarella, Lomo de cerdo, Tocineta, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de choripapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Choripapa Renacer -->
-            <div class="producto">
-                <img src="/img/choripapa.jpg" alt="Choripapa Renacer">
-                <div class="producto-info">
-                    <h3>Choripapa Renacer</h3>
-                    <p class="precio">$27,000</p>
-                    <p class="ingredientes">Papas Fritas, Chorizo, Lomo de cerdo, Queso mozzarella, Pollo, Maíz, Tocineta, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de choripapas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Categoría Suizo -->
-        <div class="categoria">
+        </section>
+
+        <!-- Categoría Suizo --> 
+        <section class="categoria" id="suizo">
             <h2>Suizo</h2>
-            <!-- Suizo Sencillo -->
-            <div class="producto">
-                <img src="/img/suizo_sencillo.jpg" alt="Suizo Sencillo">
-                <div class="producto-info">
-                    <h3>Suizo Sencillo</h3>
-                    <p class="precio">$14,000</p>
-                    <p class="ingredientes">Pan, Queso costeño, Suiza, Cebolla, Lechuga, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value ="0" class="cantidad" aria-label="Cantidad de suizos">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+            <div class="productos">
+                <!-- Suizo Sencillo -->
+                <div class="producto">
+                    <img src="/img/suizo_sencillo.jpg" alt="Suizo Sencillo">
+                    <div class="producto-info">
+                        <h3>Suizo Sencillo</h3>
+                        <p class="precio">$14,000</p>
+                        <p class="ingredientes">Papas Francesa, Queso costeño, Suiza, Cebolla, Lechuga, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de suizos">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del suizo">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suizo Mini Especial -->
+                <div class="producto">
+                    <img src="/img/suizo_mini_especial.jpg" alt="Suizo Mini Especial">
+                    <div class="producto-info">
+                        <h3>Suizo Mini Especial</h3>
+                        <p class="precio">$17,000</p>
+                        <p class="ingredientes">Papas Francesa, Queso costeño, Lomo de cerdo, Suiza, Lechuga, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de suizos">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del suizo">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suizo Especial -->
+                <div class="producto">
+                    <img src="/img/suizo_especial.jpg" alt="Suizo Especial">
+                    <div class="producto-info">
+                        <h3>Suizo Especial</h3>
+                        <p class="precio">$23,000</p>
+                        <p class="ingredientes">Papas Francesa, Queso mozzarella, Lomo de cerdo, Suiza, Cebolla, Lechuga, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de suizos">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del suizo">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suizo Renacer -->
+                <div class="producto">
+                    <img src="/img/suizo_renacer.jpeg" alt="Suizo Renacer">
+                    <div class="producto-info">
+                        <h3>Suizo Renacer</h3>
+                        <p class="precio">$30,000</p>
+                        <p class="ingredientes">Papa a la francesa, Queso mozzarella, Lomo de cerdo, Patacón, Suiza, Lechuga, Cebolla, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de suizos">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas del suizo">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Suizo Mini Especial -->
-            <div class="producto">
-                <img src="/img/suizo_mini_especial.jpg" alt="Suizo Mini Especial">
-                <div class="producto-info">
-                    <h3>Suizo Mini Especial</h3>
-                    <p class="precio">$17,000</p>
-                    <p class="ingredientes">Pan, Queso costeño, Lomo de cerdo, Suiza, Lechuga, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de suizos">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Suizo Especial -->
-            <div class="producto">
-                <img src="/img/suizo_especial.jpg" alt="Suizo Especial">
-                <div class="producto-info">
-                    <h3>Suizo Especial</h3>
-                    <p class="precio">$22,000</p>
-                    <p class="ingredientes">Pan, Queso mozzarella, Lomo de cerdo, Suiza, Cebolla, Lechuga, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de suizos">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Suizo Renacer -->
-            <div class="producto">
-                <img src="/img/suizo_renacer.jpeg" alt="Suizo Renacer">
-                <div class="producto-info">
-                    <h3>Suizo Renacer</h3>
-                    <p class="precio">$30,000</p>
-                    <p class="ingredientes">papa a la francesa, Queso mozzarella, Lomo de cerdo, Patacón, Suiza, Lechuga, Cebolla, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de suizos">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Categoría Picadas -->
-        <div class="categoria">
+        </section>
+
+        <!-- Categoría Picadas --> 
+        <section class="categoria" id="picadas">
             <h2>Picadas</h2>
-            <!-- Picada Sencilla -->
-            <div class="producto">
-                <img src="/img/picada_sencilla.jpg" alt="Picada Sencilla">
-                <div class="producto-info">
-                    <h3>Picada Sencilla</h3>
-                    <p class="precio">$22,000</p>
-                    <p class="ingredientes">Papas, Lomo de cerdo, ranchera, Lechuga, Cebolla, Ripio, Queso costeño, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+            <div class="productos">
+                <!-- Picada Sencilla -->
+                <div class="producto">
+                    <img src="/img/picada_sencilla.jpg" alt="Picada Sencilla">
+                    <div class="producto-info">
+                        <h3>Picada Sencilla</h3>
+                        <p class="precio">$22,000</p>
+                        <p class="ingredientes">Papas Francesa, Lomo de cerdo, Ranchera, Lechuga, Cebolla, Ripio, Queso costeño, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la picada">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Picada Especial -->
-            <div class="producto">
-                <img src="/img/picada_especial.jpg" alt="Picada Especial">
-                <div class="producto-info">
-                    <h3>Picada Especial</h3>
-                    <p class="precio">$28,000</p>
-                    <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Butifarra, Lechuga, Cebolla, Ripio, Queso costeño, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Picada para 3 Personas -->
-            <div class="producto">
-                <img src="/img/picada_3_personas.jpg" alt="Picada para 3 Personas">
-                <div class="producto-info">
-                    <h3>Picada para 3 Personas</h3>
-                    <p class="precio">$40,000</p>
-                    <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Butifarra, Chorizo, Ranchera, Lechuga, Cebolla, Ripio, Queso mozarella, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Picada para 4 Personas -->
-            <div class="producto">
-                <img src="/img/picada_4_personas.jpg" alt="Picada para 4 Personas">
-                <div class="producto-info">
-                    <h3>Picada para 4 Personas</h3>
-                    <p class="precio">$55,000</p>
-                    <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, queso Cheddar, Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Picada para 5 Personas -->
-            <div class="producto">
-                <img src="/img/picada_5_personas.jpg" alt="Picada para 5 Personas">
-                <div class="producto-info">
-                    <h3>Picada para 5 Personas</h3>
-                    <p class="precio">$70,000</p>
-                    <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, Queso americano Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Picada para 6 Personas -->
-            <div class="producto">
-                <img src="/img/picada_6_personas.jpg" alt="Picada para 6 Personas">
-                <div class="producto-info">
-                    <h3>Picada para 6 Personas</h3>
-                    <p class="precio">$85,000</p>
-                    <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Chicharrón, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, Queso Cheddar, Queso americano Salsas</p>
-                    <div class="acciones">
-                        <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
-                        <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Categoría Adiciones -->
-    <div class="categoria">
-        <h2>Adiciones</h2>
-        <!-- Papas -->
-        <div class="producto">
-            <img src="/img/papas.jpg" alt="Papas">
-            <div class="producto-info">
-                <h3>Papas</h3>
-                <p class="precio">$4,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                <!-- Picada Especial -->
+                <div class="producto">
+                    <img src="/img/picada_especial.jpg" alt="Picada Especial">
+                    <div class="producto-info">
+                        <h3>Picada Especial</h3>
+                        <p class="precio">$28,000</p>
+                        <p class="ingredientes">Papas Francesa, Lomo cerdo, Pechuga, Lechuga, Cebolla, Ripio, Queso costeño, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la picada">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- Queso Mozzarella -->
-        <div class="producto">
-            <img src="/img/queso_mozzarella.jpg" alt="Queso Mozzarella">
-            <div class="producto-info">
-                <h3>Queso Mozzarella</h3>
-                <p class="precio">$3,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-        <!-- Pollo -->
-        <div class="producto">
-            <img src="/img/polloo.jpg" alt="Pollo">
-            <div class="producto-info">
-                <h3>Pollo</h3>
-                <p class="precio">$7,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-        <!-- Carne de Res -->
-        <div class="producto">
-            <img src="/img/carne_res.jpg" alt="Carne de Res">
-            <div class="producto-info">
-                <h3>Carne de Res</h3>
-                <p class="precio">$8,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-        <!-- Chicharrón -->
-        <div class="producto">
-            <img src="/img/chicharron.jpg" alt="Chicharrón">
-            <div class="producto-info">
-                <h3>Chicharrón</h3>
-                <p class="precio">$11,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-        <!-- Costillas -->
-        <div class="producto">
-            <img src="/img/costillas.jpg" alt="Costillas">
-            <div class="producto-info">
-                <h3>Costillas</h3>
-                <p class="precio">$13,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Categoría Bebidas -->
-    <div class="categoria">
-        <h2>Bebidas</h2>
-        <!-- Coca-Cola Personal -->
-        <div class="producto">
-            <img src="/img/cocacola_personal.jpg" alt="Coca-Cola Personal">
-            <div class="producto-info">
-                <h3>Coca-Cola Personal</h3>
-                <p class="precio">$3,500</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                <!-- Picada para 3 Personas -->
+                <div class="producto">
+                    <img src="/img/picada_3_personas.jpg" alt="Picada para 3 Personas">
+                    <div class="producto-info">
+                        <h3>Picada para 3 Personas</h3>
+                        <p class="precio">$40,000</p>
+                        <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Butifarra, Chorizo, Ranchera, Lechuga, Cebolla, Ripio, Queso mozzarella, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la picada">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- Coca-Cola 1.5L -->
-        <div class="producto">
-            <img src="/img/cocacola_1_5l.png" alt="Coca-Cola 1.5L">
-            <div class="producto-info">
-                <h3>Coca-Cola 1.5L</h3>
-                <p class="precio">$7,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-        <!-- Postobón Personal -->
-        <div class="producto">
-            <img src="/img/postobon_personal.jpg" alt="Postobón Personal">
-            <div class="producto-info">
-                <h3>Postobón Personal</h3>
-                <p class="precio">$3,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-        <!-- Jugo Hit -->
-        <div class="producto">
-            <img src="/img/jugo_hit.jpg" alt="Jugo Hit">
-            <div class="producto-info">
-                <h3>Jugo Hit</h3>
-                <p class="precio">$4,000</p>
-                <div class="acciones">
-                    <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
-                    <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Jugo Hit -->
-    <div class="producto">
-        <img src="/img/costeñita.png" alt="Jugo Hit">
-        <div class="producto-info">
-            <h3>Costeñitas</h3>
-            <p class="precio">$3,000</p>
-            <div class="acciones">
-                <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
-                <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                <!-- Picada para 4 Personas -->
+                <div class="producto">
+                    <img src="/img/picada_4_personas.jpg" alt="Picada para 4 Personas">
+                    <div class="producto-info">
+                        <h3>Picada para 4 Personas</h3>
+                        <p class="precio">$55,000</p>
+                        <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, queso Cheddar, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la picada">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Picada para 5 Personas -->
+                <div class="producto">
+                    <img src="/img/picada_5_personas.jpg" alt="Picada para 5 Personas">
+                    <div class="producto-info">
+                        <h3>Picada para 5 Personas</h3>
+                        <p class="precio">$70,000</p>
+                        <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, Queso americano, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la picada">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Picada para 6 Personas -->
+                <div class="producto">
+                    <img src="/img/picada_6_personas.jpg" alt="Picada para 6 Personas">
+                    <div class="producto-info">
+                        <h3>Picada para 6 Personas</h3>
+                        <p class="precio">$85,000</p>
+                        <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Chicharrón, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, Queso Cheddar, Queso americano, Sals ```html
+                        <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Chicharrón, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, Queso Cheddar, Queso americano, Salsas</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
+                            <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la picada">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Categoría Adiciones --> 
+        <section class="categoria" id="adiciones">
+            <h2>Adiciones</h2>
+            <div class="productos">
+                <!-- Papas -->
+                <div class="producto">
+                    <img src="/img/papas.jpg" alt="Papas">
+                    <div class="producto-info">
+                        <h3>Papas</h3>
+                        <p class="precio">$4,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Queso Mozzarella -->
+                <div class="producto">
+                    <img src="/img/queso_mozzarella.jpg" alt="Queso Mozzarella">
+                    <div class="producto-info">
+                        <h3>Queso Mozzarella</h3>
+                        <p class="precio">$3,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pollo -->
+                <div class="producto">
+                    <img src="/img/polloo.jpg" alt="Pollo">
+                    <div class="producto-info">
+                        <h3>Pollo</h3>
+                        <p class="precio">$7,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carne de Res -->
+                <div class="producto">
+                    <img src="/img/carne_res.jpg" alt="Carne de Res">
+                    <div class="producto-info">
+                        <h3>Carne de Res</h3>
+                        <p class="precio">$8,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chicharrón -->
+                <div class="producto">
+                    <img src="/img/chicharron.jpg" alt="Chicharrón">
+                    <div class="producto-info">
+                        <h3>Chicharrón</h3>
+                        <p class="precio">$13,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de adiciones">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Costillas -->
+                <div class="producto">
+                    <img src="/img/costillas.jpg" alt="Costillas">
+                    <div class="producto-info">
+                        <h3>Costillas</h3>
+                        <p class="precio">$15,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label ="Cantidad de adiciones">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categoría Bebidas --> 
+        <section class="categoria" id="bebidas">
+            <h2>Bebidas</h2>
+            <div class="productos">
+                <!-- Coca-Cola Personal -->
+                <div class="producto">
+                    <img src="/img/cocacola_personal.jpg" alt="Coca-Cola Personal">
+                    <div class="producto-info">
+                        <h3>Coca-Cola Personal</h3>
+                        <p class="precio">$4,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coca-Cola 1.5L -->
+                <div class="producto">
+                    <img src="/img/cocacola_1_5l.png" alt="Coca-Cola 1.5L">
+                    <div class="producto-info">
+                        <h3>Coca-Cola 1.5L</h3>
+                        <p class="precio">$7,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postobón Personal -->
+                <div class="producto">
+                    <img src="/img/postobon_personal.jpg" alt="Postobón Personal">
+                    <div class="producto-info">
+                        <h3>Postobón Personal</h3>
+                        <p class="precio">$3,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jugo Hit -->
+                <div class="producto">
+                    <img src="/img/jugo_hit.jpg" alt="Jugo Hit">
+                    <div class="producto-info">
+                        <h3>Jugo Hit</h3>
+                        <p class="precio">$4,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Costeñitas -->
+                <div class="producto">
+                    <img src="/img/costeñita.png" alt="Costeñitas">
+                    <div class="producto-info">
+                        <h3>Costeñitas</h3>
+                        <p class="precio">$3,000</p>
+                        <div class="acciones">
+                            <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de bebidas">
+                            <button class="boton-carrito" aria-label="Añadir al carrito">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</div>
 
     <!-- Contenedor para los botones de abrir y cerrar carrito -->
     <div class="boton-container">
         <button id="abrir-carrito" class="boton-carrito">Abrir Carrito</button>
         <button id="cerrar-carrito-modal" class="btn-cerrar" style="display: none;">Cerrar Carrito</button> <!-- Oculto por defecto -->
     </div>
+    
     <!-- Botón flotante para mostrar/ocultar carrito en móviles -->
     <button id="toggle-carrito" class="toggle-carrito">
         🛒 <span id="contador-carrito">0</span>
@@ -644,7 +744,8 @@
     <div id="carrito-container" style="display: none;"> <!-- Oculto por defecto -->
         <div id="carrito">
             <h2>🛒 Carrito de Compras</h2>
-            <button id="cerrar-carrito-modal" class="btn-cerrar">Cerrar</button>
+            <button id="cerrar ```html
+-carrito-modal" class="btn-cerrar">Cerrar</button>
             <div id="lista-carrito"></div>
             <!-- Aquí se agregarán dinámicamente los productos -->
         </div>

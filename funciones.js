@@ -19,10 +19,11 @@ let indiceFecha = 0;
 
 // Clase para los items del carrito
 class ItemCarrito {
-    constructor(nombre, precio, cantidad) {
+    constructor(nombre, precio, cantidad, nota) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
+        this.nota = nota; // Añadir el campo de nota
         this.total = precio * cantidad;
     }
 }
@@ -97,6 +98,7 @@ function agregarAlCarrito(e) {
     const nombre = producto.querySelector('h3').textContent;
     const precioText = producto.querySelector('.precio').textContent.replace('$', '').replace(',', '');
     const precio = parseInt(precioText);
+    const nota = producto.querySelector('.nota').value; // Captura la nota
 
     if (isNaN(precio)) {
         alert('Precio no válido');
@@ -109,8 +111,9 @@ function agregarAlCarrito(e) {
     if (itemExistente) {
         itemExistente.cantidad += cantidad;
         itemExistente.total = itemExistente.precio * itemExistente.cantidad;
+        itemExistente.nota = nota; // Actualiza la nota si el producto ya existe
     } else {
-        const nuevoItem = new ItemCarrito(nombre, precio, cantidad);
+        const nuevoItem = new ItemCarrito(nombre, precio, cantidad, nota); // Pasa la nota al nuevo item
         carrito.push(nuevoItem);
     }
 
@@ -138,6 +141,7 @@ function actualizarCarrito() {
             <span>${item.nombre}</span>
             <span>$${item.precio.toLocaleString()} x ${item.cantidad}</span>
             <span>$${item.total.toLocaleString()}</span>
+            <span>Notas: ${item.nota || 'N/A'}</span> <!-- Muestra la nota -->
             <button onclick="eliminarDelCarrito(${index})" class="btn-eliminar">X</button>
         `;
         listaCarrito.appendChild(itemElement);
@@ -184,7 +188,8 @@ function enviarPedidoWhatsApp() {
             mensaje += `▪️ ${item.nombre}\n`;
             mensaje += `   Cantidad: ${item.cantidad}\n`;
             mensaje += `   Precio unitario: $${item.precio.toLocaleString()}\n`;
-            mensaje += `   Subtotal: $${item.total.toLocaleString()}\n\n`;
+            mensaje += `   Subtotal: $${item.total.toLocaleString()}\n`;
+            mensaje += `   Notas: ${item.nota || 'N/A'}\n\n`; // Incluye la nota
         });
 
         mensaje += `*TOTAL: $${total.toLocaleString()}*\n\n`;
