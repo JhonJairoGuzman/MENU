@@ -5,10 +5,10 @@ const totalElement = document.querySelector('#total');
 const contadorCarrito = document.querySelector('#contador-carrito');
 const btnVaciar = document.querySelector('#vaciar-carrito');
 const btnAbrirCarrito = document.querySelector('#abrir-carrito');
-const btnCerrarCarrito = document.querySelector('#cerrar-carrito-modal'); // Asegúrate de que el ID sea correcto
+const btnCerrarCarrito = document.querySelector('#cerrar-carrito-modal');
 const btnToggleCarrito = document.querySelector('#toggle-carrito');
-const btnMenu = document.getElementById("hamburger"); // Botón de menú hamburguesa
-const navMenu = document.querySelector(".navMenu"); // Menú de navegación
+const btnMenu = document.getElementById("hamburger");
+const navMenu = document.querySelector(".navMenu");
 let total = 0;
 
 // Clase para los items del carrito
@@ -17,7 +17,7 @@ class ItemCarrito {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
-        this.nota = nota; // Añadir el campo de nota
+        this.nota = nota;
         this.total = precio * cantidad;
     }
 }
@@ -37,8 +37,8 @@ function inicializarEventos() {
 
     // Evento para abrir/cerrar el carrito
     btnAbrirCarrito.addEventListener('click', abrirCarrito);
-    btnCerrarCarrito.addEventListener('click', cerrarCarrito); // Asegúrate de que este evento esté configurado
-    btnToggleCarrito.addEventListener('click', abrirCarrito); // Abre el carrito al hacer clic en el botón flotante
+    btnCerrarCarrito.addEventListener('click', cerrarCarrito);
+    btnToggleCarrito.addEventListener('click', abrirCarrito);
 
     // Evento para el botón de menú hamburguesa
     if (btnMenu) {
@@ -51,23 +51,17 @@ function inicializarEventos() {
 
 // Función para abrir el carrito
 function abrirCarrito() {
-    document.querySelector('#carrito-container').style.display = 'block'; // Muestra el carrito
+    document.querySelector('#carrito-container').style.display = 'block';
 }
 
 // Función para cerrar el carrito
 function cerrarCarrito() {
-    document.querySelector('#carrito-container').style.display = 'none'; // Oculta el carrito
-}
-
-// Función para mostrar/ocultar el carrito
-function toggleCarrito() {
-    const carritoContainer = document.querySelector('#carrito-container');
-    carritoContainer.style.display = carritoContainer.style.display === 'block' ? 'none' : 'block';
+    document.querySelector('#carrito-container').style.display = 'none';
 }
 
 // Función para mostrar/ocultar el menú de navegación
 function toggleMenu() {
-    navMenu.classList.toggle("active"); // Alterna la clase "active" para mostrar/ocultar el menú
+    navMenu.classList.toggle("active");
 }
 
 // Función para vaciar el carrito
@@ -81,7 +75,7 @@ function vaciarCarrito() {
 function agregarAlCarrito(e) {
     const producto = e.target.closest('.producto');
     const cantidad = parseInt(producto.querySelector('.cantidad').value);
-    
+
     if (cantidad <= 0) {
         alert('Por favor seleccione una cantidad válida');
         return;
@@ -90,7 +84,7 @@ function agregarAlCarrito(e) {
     const nombre = producto.querySelector('h3').textContent;
     const precioText = producto.querySelector('.precio').textContent.replace('$', '').replace(',', '');
     const precio = parseInt(precioText);
-    const nota = producto.querySelector('.nota').value; // Captura la nota
+    const nota = producto.querySelector('.nota') ? producto.querySelector('.nota').value : ''; // Captura la nota si existe
 
     if (isNaN(precio)) {
         alert('Precio no válido');
@@ -105,7 +99,7 @@ function agregarAlCarrito(e) {
         itemExistente.total = itemExistente.precio * itemExistente.cantidad;
         itemExistente.nota = nota; // Actualiza la nota si el producto ya existe
     } else {
-        const nuevoItem = new ItemCarrito(nombre, precio, cantidad, nota); // Pasa la nota al nuevo item
+        const nuevoItem = new ItemCarrito(nombre, precio, cantidad, nota);
         carrito.push(nuevoItem);
     }
 
@@ -128,7 +122,7 @@ function actualizarCarrito() {
 
     carrito.forEach((item, index) => {
         const itemElement = document.createElement('div');
-        itemElement.classList.add('item-carrito');
+        itemElement .classList.add('item-carrito');
         itemElement.innerHTML = `
             <span>${item.nombre}</span>
             <span>$${item.precio.toLocaleString()} x ${item.cantidad}</span>
