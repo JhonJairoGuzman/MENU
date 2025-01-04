@@ -7,15 +7,9 @@ const btnVaciar = document.querySelector('#vaciar-carrito');
 const btnAbrirCarrito = document.querySelector('#abrir-carrito');
 const btnCerrarCarrito = document.querySelector('#cerrar-carrito');
 const btnToggleCarrito = document.querySelector('#toggle-carrito');
-const btnMenu = document.querySelector('#boton-menu'); // Botón de opciones
-const opcionesMenu = document.querySelector('#opciones-menu'); // Menú de opciones
+const btnMenu = document.getElementById("hamburger"); // Botón de menú hamburguesa
+const navMenu = document.querySelector(".navMenu"); // Menú de navegación
 let total = 0;
-
-// Variables para las plantillas
-let plantillas = document.querySelectorAll('.template');
-let descripcionPlantilla = document.getElementById('descripcionPlantilla');
-let imagenVistaPrevia = document.getElementById('imagenVistaPrevia');
-let indiceFecha = 0;
 
 // Clase para los items del carrito
 class ItemCarrito {
@@ -46,8 +40,8 @@ function inicializarEventos() {
     btnCerrarCarrito.addEventListener('click', cerrarCarrito);
     btnToggleCarrito.addEventListener('click', toggleCarrito);
 
-    // Evento para el botón de opciones
-    btnMenu.addEventListener('click', toggleOpcionesMenu);
+    // Evento para el botón de menú hamburguesa
+    btnMenu.addEventListener('click', toggleMenu);
 
     // Inicializar la vista de plantillas
     actualizarVista();
@@ -69,13 +63,9 @@ function toggleCarrito() {
     carritoContainer.style.display = carritoContainer.style.display === 'block' ? 'none' : 'block';
 }
 
-// Función para mostrar/ocultar el menú de opciones
-function toggleOpcionesMenu() {
-    if (opcionesMenu.style.display === 'none' || opcionesMenu.style.display === '') {
-        opcionesMenu.style.display = 'block'; // Muestra el menú
-    } else {
-        opcionesMenu.style.display = 'none'; // Oculta el menú
-    }
+// Función para mostrar/ocultar el menú de navegación
+function toggleMenu() {
+    navMenu.classList.toggle("active"); // Alterna la clase "active" para mostrar/ocultar el menú
 }
 
 // Función para vaciar el carrito
@@ -124,7 +114,7 @@ function agregarAlCarrito(e) {
 
 // Función para actualizar el contador del carrito
 function actualizarContadorCarrito() {
-    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad , 0);
     contadorCarrito.textContent = totalItems;
     contadorCarrito.style.display = totalItems > 0 ? 'flex' : 'none';
 }
@@ -141,7 +131,7 @@ function actualizarCarrito() {
             <span>${item.nombre}</span>
             <span>$${item.precio.toLocaleString()} x ${item.cantidad}</span>
             <span>$${item.total.toLocaleString()}</span>
-            <span>Notas: ${item.nota || 'N/A'}</span> <!-- Muestra la nota -->
+            <span>Notas: ${item.nota || 'N/A'}</span>
             <button onclick="eliminarDelCarrito(${index})" class="btn-eliminar">X</button>
         `;
         listaCarrito.appendChild(itemElement);
@@ -189,7 +179,7 @@ function enviarPedidoWhatsApp() {
             mensaje += `   Cantidad: ${item.cantidad}\n`;
             mensaje += `   Precio unitario: $${item.precio.toLocaleString()}\n`;
             mensaje += `   Subtotal: $${item.total.toLocaleString()}\n`;
-            mensaje += `   Notas: ${item.nota || 'N/A'}\n\n`; // Incluye la nota
+            mensaje += `   Notas: ${item.nota || 'N/A'}\n\n`;
         });
 
         mensaje += `*TOTAL: $${total.toLocaleString()}*\n\n`;
@@ -221,25 +211,6 @@ function mostrarNotificacionEnvio() {
     setTimeout(() => {
         overlay.remove();
     }, 3000);
-}
-
-// Funciones para manejar plantillas
-function usarPlantilla(plantillaId) {
-    const plantilla = document.getElementById(plantillaId);
-    const descripcion = plantilla.querySelector('p').textContent;
-    const imagen = plantilla.querySelector('.template-image').src;
-
-    descripcionPlantilla.textContent = descripcion;
-    imagenVistaPrevia.src = imagen;
-
-    mostrarNotificacion(`Plantilla "${descripcion}" aplicada.`);
-}
-
-function quitarPlantilla(plantillaId) {
-    descripcionPlantilla.textContent = '';
-    imagenVistaPrevia.src = '';
-
-    mostrarNotificacion(`Plantilla "${plantillaId}" quitada.`);
 }
 
 // Inicializar eventos cuando el DOM esté cargado
