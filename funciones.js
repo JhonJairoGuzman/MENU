@@ -5,7 +5,7 @@ const totalElement = document.querySelector('#total');
 const contadorCarrito = document.querySelector('#contador-carrito');
 const btnVaciar = document.querySelector('#vaciar-carrito');
 const btnAbrirCarrito = document.querySelector('#abrir-carrito');
-const btnCerrarCarrito = document.querySelector('#cerrar-carrito');
+const btnCerrarCarrito = document.querySelector('#cerrar-carrito-modal'); // Asegúrate de que el ID sea correcto
 const btnToggleCarrito = document.querySelector('#toggle-carrito');
 const btnMenu = document.getElementById("hamburger"); // Botón de menú hamburguesa
 const navMenu = document.querySelector(".navMenu"); // Menú de navegación
@@ -37,11 +37,13 @@ function inicializarEventos() {
 
     // Evento para abrir/cerrar el carrito
     btnAbrirCarrito.addEventListener('click', abrirCarrito);
-    btnCerrarCarrito.addEventListener('click', cerrarCarrito);
-    btnToggleCarrito.addEventListener('click', toggleCarrito);
+    btnCerrarCarrito.addEventListener('click', cerrarCarrito); // Asegúrate de que este evento esté configurado
+    btnToggleCarrito.addEventListener('click', abrirCarrito); // Abre el carrito al hacer clic en el botón flotante
 
     // Evento para el botón de menú hamburguesa
-    btnMenu.addEventListener('click', toggleMenu);
+    if (btnMenu) {
+        btnMenu.addEventListener('click', toggleMenu);
+    }
 
     // Inicializar la vista de plantillas
     actualizarVista();
@@ -114,7 +116,7 @@ function agregarAlCarrito(e) {
 
 // Función para actualizar el contador del carrito
 function actualizarContadorCarrito() {
-    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad , 0);
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
     contadorCarrito.textContent = totalItems;
     contadorCarrito.style.display = totalItems > 0 ? 'flex' : 'none';
 }

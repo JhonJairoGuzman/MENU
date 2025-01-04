@@ -16,26 +16,49 @@
     </div>
     <h1>MENÚ - THE RENACER</h1>
   
-    
-    <!-- Menú de navegación -->
-    <nav>
-        <div class="nav-container">
-            <div class="hamburger-menu" id="hamburger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <ul class="navMenu">
-                <li><a href="#hamburguesas">Hamburguesas</a></li>
-                <li><a href="#perros-calientes">Perros Calientes</a></li>
-                <li><a href="#salchipapas">Salchipapas</a></li>
-                <li><a href="#suizo">Suizo</a></li>
-                <li><a href="#picadas">Picadas</a></li>
-                <li><a href="#adiciones">Adiciones</a></li>
-                <li><a href="#bebidas">Bebidas</a></li>
-            </ul>
+        <!-- Contenedor para los botones de abrir y cerrar carrito -->
+        <div class="boton-container">
+            <button id="abrir-carrito" class="boton-carrito">Abrir Carrito</button>
+            <button id="cerrar-carrito-modal" class="btn-cerrar" style="display: none;">Cerrar Carrito</button> <!-- Oculto por defecto -->
         </div>
+
+  <!-- Botón flotante para mostrar/ocultar carrito en móviles -->
+<button id="toggle-carrito" class="toggle-carrito">
+    🛒 <span id="contador-carrito">0</span>
+</button>
+
+<!-- Contenedor del Carrito de Compras -->
+<div id="carrito-container" style="display: none;"> <!-- Oculto por defecto -->
+    <div id="carrito">
+        <h2>🛒 Carrito de Compras</h2>
+        <button id="cerrar-carrito-modal" class="btn-cerrar">Cerrar</button>
+        <div id="lista-carrito"></div>
+        <!-- Aquí se agregarán dinámicamente los productos -->
+    </div>
+    <div id="total">Total: $0</div>
+    <div class="carrito-botones">
+        <button id="enviar-pedido" class="btn-enviar">
+            <i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp
+        </button>
+        <button id="vaciar-carrito" class="btn-vaciar">
+            <i class="fas fa-trash"></i> Vaciar Carrito
+        </button>
+    </div>
+</div>
+
+       <!-- Menú de navegación -->
+    <nav>
+        <ul class="navMenu">
+            <li><a href="#hamburguesas">Hambur</a></li>
+            <li><a href="#perros-calientes">Perros</a></li>
+            <li><a href="#salchipapas">Salchip</a></li>
+            <li><a href="#suizo">Suizo</a></li>
+            <li><a href="#picadas">Picad</a></li>
+            <li><a href="#adiciones">Add</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+        </ul>
     </nav>
+
     <div class="menu">
         <!-- Categoría Hamburguesas --> 
         <section class="categoria" id="hamburguesas">
@@ -567,8 +590,12 @@
                     <div class="producto-info">
                         <h3>Picada para 6 Personas</h3>
                         <p class="precio">$85,000</p>
-                        <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Chicharrón, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, Queso Cheddar, Queso americano, Sals ```html
-                        <p class="ingredientes">Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Chicharrón, Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, Queso mozzarella, Queso Cheddar, Queso americano, Salsas</p>
+                        <p class="ingredientes">
+                            Papas, Lomo cerdo, Pechuga, Carne de res, Costillitas, Chicharrón, 
+                            Butifarra, Chorizo, Ranchera, Suiza, Lechuga, Cebolla, Ripio, 
+                            Queso mozzarella, Queso Cheddar, Queso americano, Salsa BBQ, Salsa de ajo.
+                        </p>
+                        
                         <div class="acciones">
                             <input type="number" min="0" value="0" class="cantidad" aria-label="Cantidad de picadas">
                             <input type="text" class="nota" placeholder="Notas especiales (Ej: sin cebolla)" aria-label="Notas de la picada">
@@ -733,37 +760,6 @@
                 </div>
             </div>
         </section>
-    </div>
-
-    <!-- Contenedor para los botones de abrir y cerrar carrito -->
-    <div class="boton-container">
-        <button id="abrir-carrito" class="boton-carrito">Abrir Carrito</button>
-        <button id="cerrar-carrito-modal" class="btn-cerrar" style="display: none;">Cerrar Carrito</button> <!-- Oculto por defecto -->
-    </div>
-    
-    <!-- Botón flotante para mostrar/ocultar carrito en móviles -->
-    <button id="toggle-carrito" class="toggle-carrito">
-        🛒 <span id="contador-carrito">0</span>
-    </button>
-    
-    <!-- Contenedor del Carrito de Compras -->
-    <div id="carrito-container" style="display: none;"> <!-- Oculto por defecto -->
-        <div id="carrito">
-            <h2>🛒 Carrito de Compras</h2>
-            <button id="cerrar ```html
--carrito-modal" class="btn-cerrar">Cerrar</button>
-            <div id="lista-carrito"></div>
-            <!-- Aquí se agregarán dinámicamente los productos -->
-        </div>
-        <div id="total">Total: $0</div>
-        <div class="carrito-botones">
-            <button id="enviar-pedido" class="btn-enviar">
-                <i class="fab fa-whatsapp"></i> Enviar Pedido por WhatsApp
-            </button>
-            <button id="vaciar-carrito" class="btn-vaciar">
-                <i class="fas fa-trash"></i> Vaciar Carrito
-            </button>
-        </div>
     </div>
 
     <!-- Overlay para notificaciones -->

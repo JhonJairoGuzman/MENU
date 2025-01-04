@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap');
-
+/* Estilos generales */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif; /* Cambiado a Arial */
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,7 +19,7 @@ h1 {
 
 h1:hover {
     color: #d23f57;
-    transform: scale(1.05); /* Añadido efecto de aumento */
+    transform: scale(1.05);
 }
 
 .menu {
@@ -51,123 +50,64 @@ h1:hover {
     display: block;
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background-color: red;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
-    z-index: 0;
-}
-
-.button:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.button:hover {
-    background-color: darkred;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px); /* Efecto de elevación */
-}
-
-.button:active {
-    transform: scale(0.95);
-}
-
 /* Estilos para el menú de navegación */
 nav {
-    background-color: #333;
+    background-color: #444; /* Color de fondo del menú */
     padding: 10px;
     width: 100%;
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Cambiado a columna para apilar categorías */
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.hamburger-menu {
-    display: none; /* Oculto por defecto */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger-menu div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-/* Estilos para la lista de navegación */
 .navMenu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Permitir que las categorías se envuelvan */
+    justify-content: center; /* Centrar las categorías */
 }
 
 .navMenu li {
-    display: inline;
+    margin: 5px; /* Espaciado entre categorías */
 }
 
 .navMenu a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto hover en los enlaces del menú */
+.navMenu a:hover {
+    background-color: #d23f57; /* Color de fondo al pasar el mouse */
+    color: #fff; /* Cambiar color del texto al pasar el mouse */
 }
 
 /* Estilos para el menú en dispositivos móviles */
 @media (max-width: 768px) {
     .navMenu {
-        display: none; /* Ocultar menú por defecto */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 50px; /* Ajusta según la altura de tu encabezado */
-        left: 0;
-        background-color: #333;
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar elementos */
+        padding: 0; /* Sin padding */
     }
 
-    .navMenu 
-    .navMenu.active {
-        display: flex; /* Mostrar menú cuando está activo */
+    .navMenu li {
+        width: 100%; /* Hacer que cada categoría ocupe el ancho completo */
+        text-align: center; /* Centrar texto */
     }
 
-    .hamburger-menu {
-        display: flex; /* Mostrar el menú hamburguesa en móviles */
+    .navMenu a {
+        padding: 15px; /* Aumentar el padding para mejor clicabilidad */
+        width: 100%; /* Hacer que el enlace ocupe todo el ancho */
     }
-}
-
-/* Estilos para el hover en los enlaces del menú */
-.navMenu a:hover {
-    background-color:#c0392b; /* Color de fondo al pasar el mouse */
 }
 
 /* Estilos para las categorías */
@@ -276,6 +216,9 @@ nav {
     transform: scale(1.05);
 }
 
+
+
+
 /* Estilos para el campo de notas */
 .nota {
     width: 100%;
@@ -330,7 +273,7 @@ nav {
 .contacto i {
     margin-right: 15px;
     font-size: 1.4em;
-    width: 30 px;
+    width: 30px;
     text-align: center;
 }
 
@@ -354,6 +297,9 @@ nav {
 .contacto .fa-money-bill-wave { color: #27ae60; }
 .contacto .fa-university { color: #3498db; }
 
+
+
+
 /* Estilos para el carrito de compras */
 #carrito-container {
     position: fixed;
@@ -362,7 +308,7 @@ nav {
     width: 300px;
     height: auto;
     background-color: black;
-    border-radius: 15px;
+    border-radius:  15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 100;
     padding: 10px;
@@ -494,7 +440,7 @@ nav {
 }
 
 .mensaje-envio {
-    background-color: white;
+    background: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -513,6 +459,17 @@ nav {
 
 .boton-cerrar-carrito:hover {
     background-color: #c82333;
+}
+
+#carrito-container {
+    position: fixed; /* Cambiado a fixed para que esté en la parte superior */
+    top: 0; /* Alineado a la parte superior */
+    right: 10px; /* Ajusta la posición horizontal */
+    width: 300px;
+    height: auto;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 0 
 }
 
 /* Media queries para hacer el carrito responsive */
@@ -538,7 +495,7 @@ nav {
     }
 
     #carrito {
-        padding: 15px;
+        padding:  15px;
     }
 
     .toggle-carrito {
@@ -564,14 +521,14 @@ nav {
 
     #toggle-carrito-movil {
         display: block; /* Mostrar en móviles */
-        background-color: #d23f57;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        background-color: #d23f57; /* Color de fondo */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
+        font-size: 16px; /* Tamaño de fuente */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
     }
 
     #toggle-carrito-movil:hover {
@@ -629,6 +586,6 @@ nav {
     }
 
     .opciones li:hover {
-        background-color: #f1f1f1; /* Color de fondo al pasar el mouse */
+        background: #f1f1f1; /* Color de fondo al pasar el mouse */
     }
 }
