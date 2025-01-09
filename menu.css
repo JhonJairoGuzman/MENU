@@ -106,6 +106,24 @@ nav {
     transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
 }
 
+/* Estilos para el botón "Añadir al Carrito" */
+.boton-carrito {
+    background-color: #d23f57; /* Color de fondo rojo */
+    color: #ffffff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    padding: 12px 24px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para el color de fondo y el efecto de transformación */
+    margin: 8px; /* Margen alrededor del botón */
+}
+
+.boton-carrito:hover {
+    background-color: #c0392b; /* Color de fondo más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
 /* Efecto hover en los enlaces del menú */
 .navMenu a {
     color: white;
@@ -259,7 +277,7 @@ nav {
     font-size: 1.8em;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom : 25px;
     border-bottom: 2px solid #d23f57;
     padding-bottom: 10px;
 }
@@ -298,7 +316,6 @@ nav {
     border-bottom: 1px solid #c0392b;
 }
 
-.contact 
 .contacto .fa-motorcycle { color: #2ecc71; }
 .contacto .fa-instagram { color: #e1306c; }
 .contacto .fa-tiktok { color: #000000; }
@@ -313,7 +330,7 @@ nav {
     width: 300px;
     height: auto;
     background-color: black;
-    border-radius:  15px;
+    border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 100;
     padding: 10px;
@@ -534,7 +551,8 @@ nav {
     .opciones li:hover {
         background: #f1f1f1; /* Color de fondo al pasar el mouse */
     }
-} 
+}
+
 .contacto .fa-motorcycle { color: #2ecc71; }
 .contacto .fa-instagram { color: #e1306c; }
 .contacto .fa-tiktok { color: #000000; }
@@ -549,7 +567,7 @@ nav {
     width: 300px;
     height: auto;
     background-color: black;
-    border-radius:  15px;
+    border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 100;
     padding: 10px;
