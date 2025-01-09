@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
@@ -16,6 +17,7 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
     max-width: 600px;
+    width: 90%; /* Asegura que el contenedor no exceda el 90% del ancho de la pantalla */
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -123,4 +125,51 @@ body {
     color: #e74c3c; /* Color rojo */
     margin-top: 20px;
     font-weight: bold; /* Negrita para mayor énfasis */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em; /* Reducir tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .message {
+        font-size: 1.1em; /* Reducir tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .date {
+        font-size: 1.2em; /* Reducir tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .time {
+        font-size: 1.2em; /* Reducir tamaño de fuente en pantallas más pequeñas */
+        padding: 10px 20px; /* Ajustar el padding para que se vea mejor */
+    }
+
+    .footer-message {
+        font-size: 1em; /* Reducir tamaño de fuente en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em; /* Tamaño de fuente aún más pequeño para dispositivos muy pequeños */
+    }
+
+    .message {
+        font-size: 1em; /* Tamaño de fuente aún más pequeño para dispositivos muy pequeños */
+    }
+
+    .date {
+        font-size: 1.1em; /* Tamaño de fuente aún más pequeño para dispositivos muy pequeños */
+    }
+
+    .time {
+        font-size: 1em; /* Tamaño de fuente aún más pequeño para dispositivos muy pequeños */
+        padding: 8px 15px; /* Ajustar el padding para que se vea mejor */
+    }
+
+    .footer-message {
+        font-size: 0.9em; /* Tamaño de fuente aún más pequeño para dispositivos muy pequeños */
+    }
 }
