@@ -78,6 +78,35 @@ nav {
     margin: 5px; /* Espaciado entre categorías */
 }
 
+/* Estilos para los botones ovalados */
+.boton-container {
+    display: flex; /* Mantener los botones en línea */
+    justify-content: center; /* Centrar los botones */
+    margin: 20px 0; /* Espaciado vertical */
+}
+
+.oval-button {
+    background-color: #e74c3c; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    padding: 12px 24px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que se comporte como un botón */
+    font-size: 18px; /* Tamaño de la fuente */
+    margin: 8px; /* Margen alrededor del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados más pronunciados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para el color de fondo y el efecto de transformación */
+}
+
+.oval-button:hover {
+    background-color: #c0392b; /* Color de fondo más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Efecto hover en los enlaces del menú */
 .navMenu a {
     color: white;
     text-decoration: none;
@@ -85,7 +114,6 @@ nav {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Efecto hover en los enlaces del menú */
 .navMenu a:hover {
     background-color: #d23f57; /* Color de fondo al pasar el mouse */
     color: #fff; /* Cambiar color del texto al pasar el mouse */
@@ -200,25 +228,6 @@ nav {
     text-align: center;
 }
 
-.boton-carrito {
-    background-color: #d23f57;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.boton-carrito:hover {
-    background-color: #c0392b;
-    transform: scale(1.05);
-}
-
-
-
-
 /* Estilos para el campo de notas */
 .nota {
     width: 100%;
@@ -243,8 +252,6 @@ nav {
     border-radius: 15px;
     margin: 30px 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
 }
 
 .contacto h1 {
@@ -291,14 +298,12 @@ nav {
     border-bottom: 1px solid #c0392b;
 }
 
+.contact 
 .contacto .fa-motorcycle { color: #2ecc71; }
 .contacto .fa-instagram { color: #e1306c; }
 .contacto .fa-tiktok { color: #000000; }
 .contacto .fa-money-bill-wave { color: #27ae60; }
 .contacto .fa-university { color: #3498db; }
-
-
-
 
 /* Estilos para el carrito de compras */
 #carrito-container {
@@ -446,111 +451,240 @@ nav {
     text-align: center;
 }
 
-.boton-tutorial {
-    background-color: #e74c3c; /* Color de fondo rojo */
-    color: white; /* Color del texto */
-    padding: 12px 24px; /* Espaciado interno */
-    text-align: center; /* Centrar el texto */
-    text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Para que se comporte como un botón */
-    font-size: 18px; /* Tamaño de la fuente */
-    margin: 8px 4px; /* Margen alrededor del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    border: none; /* Sin borde */
-    border-radius: 25px; /* Bordes redondeados más pronunciados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-    transition: background-color 0.3s, transform 0.2s; /* Transición suave para el color de fondo y el efecto de transformación */
+/* Estilos para los botones flotantes */
+#toggle-carrito {
+    display: none; /* Oculto por defecto, se mostrará en móviles */
 }
 
-.boton-tutorial:hover {
-    background-color: #c0392b; /* Color de fondo más oscuro al pasar el mouse */
-    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+#toggle-carrito-movil {
+    display: none; /* Oculto por defecto, se mostrará en móviles */
 }
 
-/* Estilos existentes... */
-
-.nav-button {
-    background-color: #e74c3c; /* Color rojo */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 10px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.nav-button:hover {
-    background-color: #c0392b; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
-}
-
-/* Media Queries para mejorar la responsividad en pantallas más pequeñas */
-@media (max-width: 600px) {
-    .nav-button {
-        padding: 8px 16px; /* Ajusta el tamaño de los botones en pantallas pequeñas */
-        font-size: 14px; /* Reduce el tamaño de la fuente */
+@media (max-width: 768px) {
+    #toggle-carrito {
+        display: block; /* Mostrar en móviles */
     }
-}
 
-/* Estilos del botón Cerrar Carrito */
-.boton-cerrar-carrito {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    #toggle-carrito-movil {
+        display: block; /* Mostrar en móviles */
+        background-color: #d23f57; /* Color de fondo */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
+        font-size: 16px; /* Tamaño de fuente */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    }
 
-.boton-cerrar-carrito:hover {
-    background-color: #c82333;
-}
+    #toggle-carrito-movil:hover {
+        background-color: #c0392b; /* Color más oscuro al pasar el mouse */
+    }
 
+    .menu-desplegable {
+        position: fixed; /* Fijo en la pantalla */
+        top: 20px; /* Ajusta la posición vertical */
+        right: 20px; /* Ajusta la posición horizontal */
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .boton-menu {
+        background-color: #4CAF50; /* Color de fondo */
+        color: white; /* Color del texto */
+        padding: 10px 15px; /* Espaciado interno */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        font-size: 16px; /* Tamaño de fuente */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    }
+
+    .boton-menu:hover {
+        background-color: #45a049; /* Color de fondo al pasar el mouse */
+    }
+
+    .opciones {
+        display: none; /* Oculto por defecto */
+        position: absolute; /* Posicionamiento absoluto */
+        top: 40px; /* Ajusta la posición vertical del menú desplegable */
+        right: 0; /* Alineado a la derecha */
+        background-color: white; /* Color de fondo del menú */
+        border: 1px solid #ccc; /* Borde del menú */
+        border-radius: 5px; /* Bordes redondeados */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del menú */
+        z-index: 999; /* Asegúrate de que esté por encima de otros elementos */
+    }
+
+    .opciones ul {
+        list-style-type: none; /* Sin viñetas */
+        padding: 0; /* Sin padding */
+        margin: 0; /* Sin margen */
+    }
+
+    .opciones li {
+        padding: 10px; /* Espaciado interno de cada opción */
+    }
+
+    .opciones li a {
+        text-decoration: none; /* Sin subrayado */
+        color: #333; /* Color del texto */
+        display: block; /* Hace que el área clickeable sea toda la opción */
+    }
+
+    .opciones li:hover {
+        background: #f1f1f1; /* Color de fondo al pasar el mouse */
+    }
+} 
+.contacto .fa-motorcycle { color: #2ecc71; }
+.contacto .fa-instagram { color: #e1306c; }
+.contacto .fa-tiktok { color: #000000; }
+.contacto .fa-money-bill-wave { color: #27ae60; }
+.contacto .fa-university { color: #3498db; }
+
+/* Estilos para el carrito de compras */
 #carrito-container {
-    position: fixed; /* Cambiado a fixed para que esté en la parte superior */
-    top: 0; /* Alineado a la parte superior */
-    right: 10px; /* Ajusta la posición horizontal */
+    position: fixed;
+    right: 10px;
+    bottom: 0;
     width: 300px;
     height: auto;
     background-color: black;
-    border-radius: 15px;
-    box-shadow: 0 0 
+    border-radius:  15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
-/* Media queries para hacer el carrito responsive */
-@media (max-width: 750px) {
-    #carrito-container {
-        position: relative;
-        margin-top: 20px;
-        padding: 20px;
-        background-color: black;
-        border-radius: 15px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .productos {
-        margin-bottom: 20px;
-    }
-    
-    .producto {
-        padding: 10px;
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
+#carrito {
+    padding: 20px;
+}
 
-    #carrito {
-        padding:  15px;
-    }
+#carrito h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d23f57;
+    padding-bottom: 10px;
+}
 
-    .toggle-carrito {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+#lista-carrito {
+    margin-bottom: 20px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+#total {
+    font-weight: bold;
+    text-align: right;
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #d23f57;
+}
+
+.btn-enviar, .btn-vaciar {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar {
+    background-color: #25D366;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #128C7E;
+}
+
+.btn-vaciar {
+    background-color: #ff4444;
+    color: white;
+}
+
+.btn-vaciar:hover {
+    background-color: #cc0000;
+}
+
+.cantidad-carrito {
+    width: 40px;
+    text-align: center;
+}
+
+.btn-eliminar {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.toggle-carrito {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d23f57;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1001;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.mensaje-envio {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /* Estilos para los botones flotantes */
