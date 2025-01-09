@@ -446,6 +446,54 @@ nav {
     text-align: center;
 }
 
+.boton-tutorial {
+    background-color: #e74c3c; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    padding: 12px 24px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que se comporte como un botón */
+    font-size: 18px; /* Tamaño de la fuente */
+    margin: 8px 4px; /* Margen alrededor del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados más pronunciados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para el color de fondo y el efecto de transformación */
+}
+
+.boton-tutorial:hover {
+    background-color: #c0392b; /* Color de fondo más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Estilos existentes... */
+
+.nav-button {
+    background-color: #e74c3c; /* Color rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+    background-color: #c0392b; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Media Queries para mejorar la responsividad en pantallas más pequeñas */
+@media (max-width: 600px) {
+    .nav-button {
+        padding: 8px 16px; /* Ajusta el tamaño de los botones en pantallas pequeñas */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+}
+
 /* Estilos del botón Cerrar Carrito */
 .boton-cerrar-carrito {
     background-color: #dc3545;
