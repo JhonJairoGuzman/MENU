@@ -51,32 +51,68 @@ h1:hover {
 }
 
 /* Estilos para el menú de navegación */
-nav {
-    background-color: #444; /* Color de fondo del menú */
-    padding: 10px;
-    width: 100%;
-}
-
-.nav-container {
-    display: flex;
-    flex-direction: column; /* Cambiado a columna para apilar categorías */
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.navMenu {
-    list-style-type: none;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap; /* Permitir que las categorías se envuelvan */
-    justify-content: center; /* Centrar las categorías */
-}
+  }
 
-.navMenu li {
-    margin: 5px; /* Espaciado entre categorías */
-}
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    max-height: 50px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .menu-button {
+    background-color: #ff4b4b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-button:hover {
+    background-color: #e53935;
+  }
+
+  .menu-options {
+    display: none;
+    margin-top: 10px;
+    background-color: #444;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+  }
+
+  .menu-options a:hover {
+    text-decoration: underline;
+  }
 
 /* Estilos para los botones ovalados */
 .boton-container {
@@ -208,10 +244,17 @@ nav {
     border-radius: 12px;
     margin-bottom: 10px;
     transition: transform 0.3s;
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
 }
 
 .producto img:hover {
     transform: scale(1.1);
+}
+
+/* Animación para agrandar la imagen del producto */
+.producto img.agrandar {
+    transform: scale(2); /* Aumenta el tamaño de la imagen */
+    transition: transform 0.3s ease; /* Transición suave */
 }
 
 .producto-info {

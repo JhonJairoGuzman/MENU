@@ -45,6 +45,13 @@ function inicializarEventos() {
         btnMenu.addEventListener('click', toggleMenu);
     }
 
+    // Evento para agrandar imágenes al hacer clic
+    document.querySelectorAll('.producto img').forEach(img => {
+        img.addEventListener('click', () => {
+            img.classList.toggle('agrandar');
+        });
+    });
+
     // Inicializar la vista de plantillas
     actualizarVista();
 }
@@ -118,11 +125,11 @@ function actualizarContadorCarrito() {
 // Función para actualizar la visualización del carrito
 function actualizarCarrito() {
     listaCarrito.innerHTML = '';
-    total = 0;
+    total =  0;
 
     carrito.forEach((item, index) => {
         const itemElement = document.createElement('div');
-        itemElement .classList.add('item-carrito');
+        itemElement.classList.add('item-carrito');
         itemElement.innerHTML = `
             <span>${item.nombre}</span>
             <span>$${item.precio.toLocaleString()} x ${item.cantidad}</span>
